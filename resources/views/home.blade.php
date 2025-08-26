@@ -63,7 +63,7 @@
 
 <section class="container py-3">
     <section class="wantToWork-area" 
-        style="background-image: url('{{ asset('img/section_bg01.png') }}'); background-size: cover; background-position: center;">
+        style="background-image: url('{{ asset (env('ASSET_PREFIX', '').'img/section_bg01.png') }}'); background-size: cover; background-position: center;">
 
         <div class="wants-wrapper w-padding2">
             <div class="row align-items-center justify-content-between">
