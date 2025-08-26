@@ -6,8 +6,8 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <video class="w-100" autoplay muted loop playsinline>
-                <source src="public/img/BlueWhale01.MP4" type="video/mp4">
-                Your browser does not support the video tag.s
+                <source src="{{ asset ('img/BlueWhale01.MP4')}}" type="video/mp4"> 
+                Your browser does not support the video tag.
             </video>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
@@ -20,7 +20,7 @@
         </div>
         <div class="carousel-item">
             <video class="w-100" autoplay muted loop playsinline>
-                <source src="public/img/Gx015297.mp4" type="video/mp4">
+                <source src="{{ asset ('img/Gx015297.mp4')}}" type="video/mp4"> 
                 Your browser does not support the video tag.
             </video>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -34,7 +34,7 @@
         </div>
         <div class="carousel-item">
             <video class="w-100" autoplay muted loop playsinline>
-                <source src="public/img/Gx014893.mp4" type="video/mp4">
+                <source src="{{ asset ('img/Gx014893.mp4')}}" type="video/mp4"> 
                 Your browser does not support the video tag.
             </video>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -62,7 +62,8 @@
 <!-- Banner Section Start -->
 
 <section class="container py-3">
-    <section class="wantToWork-area" style="background-image: url('public/img/section_bg01.png'); background-size: cover; background-position: center;">
+    <section class="wantToWork-area" 
+        style="background-image: url('{{ asset('img/section_bg01.png') }}'); background-size: cover; background-position: center;">
 
         <div class="wants-wrapper w-padding2">
             <div class="row align-items-center justify-content-between">
@@ -90,7 +91,7 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="section-title position-relative pb-3 mb-3">
-                    <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
+                    <h5 class="fw-bold text-primary text-uppercase">About Uss</h5>
                     <h1 class="display-6 mb-0">Let us make your diving experience unforgettable</h1>
                 </div>
                 <p class="mb-4">Dive into the beauty of Mirissa Bay with our Diving, Snorkeling, and Blue Whale Tours. Discover vibrant coral reefs, swim with colorful marine life, and experience the awe of seeing majestic blue whales. Perfect for adventurers and nature lovers, we promise an unforgettable ocean experience.</p>
@@ -109,8 +110,8 @@
             </div>
             <div class="col-lg-6 pt-2" style="min-height: 500px;">
                 <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                    <img class="position-absolute img-fluid w-100 h-100" src="public/img/about-4.jpg" style="object-fit: cover; padding: 0 0 50px 100px;" alt="Snorkeling">
-                    <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="public/img/about-2.jpg" style="object-fit: cover;" alt="Snorkeling">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{{ asset ('img/about-4.jpg')}}" style="object-fit: cover; padding: 0 0 50px 100px;" alt="Snorkeling">
+                    <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="{{ asset ('img/about-2.jpg')}}" style="object-fit: cover;" alt="Snorkeling">
                 </div>
             </div>
         </div>
@@ -131,7 +132,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-4.png" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-4.png')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Blue Whale Watching</h4>
@@ -145,7 +146,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-14.jpg" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-14.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Blue Whale Snorkeling</h4>
@@ -162,7 +163,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-15.png" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-15.png')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Dolpin Snorkeling</h4>
@@ -178,7 +179,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-7.jpg" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-7.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Turtle Snorkeling Shallow Water</h4>
@@ -192,7 +193,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-8.jpg" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-8.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Free diving</h4>
@@ -208,7 +209,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-9.jpg" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-9.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Deep Sea Fishing Tour</h4>
@@ -225,7 +226,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-10.jpg" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-10.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Discovery scuba diving DSD</h4>
@@ -241,7 +242,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-11.jpg" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-11.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Fun Diving</h4>
@@ -255,7 +256,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="public/img/price-12.jpg" alt="Snorkeling">
+                            <img class="img-fluid rounded-top" src="{{ asset ('img/price-12.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
                             <h4>Reef Diving</h4>
@@ -293,9 +294,9 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="row g-4">
                     <div class="col-12">
-                        <a class="animal-item" href="public/img/gallery-1.jpg" data-lightbox="animal">
+                        <a class="animal-item" href="{{ asset ('img/gallery-1.jpg')}}" data-lightbox="animal"> 
                             <div class="position-relative">
-                                <img class="img-fluid" src="public/img/gallery-1.jpg" alt="Snorkeling" />
+                                <img class="img-fluid" src="{{ asset ('img/gallery-1.jpg')}}" alt="Snorkeling" />
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">12/09/2024</p>
                                     <h5 class="text-white mb-0">Mirissa sri lanka</h5>
@@ -304,9 +305,9 @@
                         </a>
                     </div>
                     <div class="col-12">
-                        <a class="animal-item" href="public/img/gallery-2.jpg" data-lightbox="animal">
+                        <a class="animal-item" href="{{ asset ('img/gallery-2.jpg')}}" data-lightbox="animal">
                             <div class="position-relative">
-                                <img class="img-fluid" src="public/img/gallery-2.jpg" alt="Snorkeling" />
+                                <img class="img-fluid" src="{{ asset ('img/gallery-2.jpg')}}" alt="Snorkeling" />
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">12/09/2024</p>
                                     <h5 class="text-white mb-0">Mirissa sri lanka</h5>
@@ -319,9 +320,9 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="row g-4">
                     <div class="col-12">
-                        <a class="animal-item" href="public/img/gallery-7.jpeg" data-lightbox="animal">
+                        <a class="animal-item" href="{{ asset ('img/gallery-7.jpeg')}}" data-lightbox="animal">
                             <div class="position-relative">
-                                <img class="img-fluid" src="public/img/gallery-7.jpeg" alt="Snorkeling" />
+                                <img class="img-fluid" src="{{ asset ('img/gallery-7.jpeg')}}" alt="Snorkeling" />
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">12/09/2024</p>
                                     <h5 class="text-white mb-0">Mirissa sri lanka</h5>
@@ -330,9 +331,9 @@
                         </a>
                     </div>
                     <div class="col-12">
-                        <a class="animal-item" href="public/img/gallery-4.jpg" data-lightbox="animal">
+                        <a class="animal-item" href="{{ asset ('img/gallery-4.jpg')}}" data-lightbox="animal">
                             <div class="position-relative">
-                                <img class="img-fluid" src="public/img/gallery-4.jpg" alt="Snorkeling" />
+                                <img class="img-fluid" src="{{ asset ('img/gallery-4.jpg')}}" alt="Snorkeling" />
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">12/09/2024</p>
                                     <h5 class="text-white mb-0">Mirissa sri lanka</h5>
@@ -345,9 +346,9 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="row g-4">
                     <div class="col-12">
-                        <a class="animal-item" href="public/img/gallery-5.jpg" data-lightbox="animal">
+                        <a class="animal-item" href="{{ asset ('img/gallery-5.jpg')}}" data-lightbox="animal">
                             <div class="position-relative">
-                                <img class="img-fluid" src="public/img/gallery-5.jpg" alt="Snorkeling" />
+                                <img class="img-fluid" src="{{ asset ('img/gallery-5.jpg')}}" alt="Snorkeling" />
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">12/09/2024</p>
                                     <h5 class="text-white mb-0">Mirissa sri lanka</h5>
@@ -356,9 +357,9 @@
                         </a>
                     </div>
                     <div class="col-12">
-                        <a class="animal-item" href="public/img/gallery-6.jpg" data-lightbox="animal">
+                        <a class="animal-item" href="{{ asset ('img/gallery-6.jpg')}}" data-lightbox="animal">
                             <div class="position-relative">
-                                <img class="img-fluid" src="public/img/gallery-6.jpg" alt="Snorkeling" />
+                                <img class="img-fluid" src="{{ asset ('img/gallery-6.jpg')}}" alt="Snorkeling" />
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">12/09/2024</p>
                                     <h5 class="text-white mb-0">Mirissa sri lanka</h5>
@@ -396,7 +397,7 @@
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
             <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="public/img/testimonial-1.jpg" style="width: 100px; height: 100px;" alt="Snorkeling">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ asset ('img/testimonial-1.jpg')}}" style="width: 100px; height: 100px;" alt="Snorkeling">
                 <div class="testimonial-text rounded text-center p-4">
                     <p>Brilliant snorkelling experience! Picked up from Marisa beach and taken to a private beach to swim with the turtles, stopping to get seaweed (turtles favourite snack!) on the way. Thank you for an amazing experience!</p>
                     <h5 class="mb-1">Hannah Kalyan</h5>
@@ -404,7 +405,7 @@
                 </div>
             </div>
             <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="public/img/testimonial-2.jpg" style="width: 100px; height: 100px;" alt="Snorkeling">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ asset ('img/testimonial-2.jpg')}}" style="width: 100px; height: 100px;" alt="Snorkeling">
                 <div class="testimonial-text rounded text-center p-4">
                     <p>The owner Krishantha is such an experienced diver, surfer and the list goes on. He knows all the very best spots for whale watching. I’m definitely returning to Mirissa just for a second round. Could not have asked for a better experience.</p>
                     <h5 class="mb-1">Tahsin Saira</h5>
@@ -412,7 +413,7 @@
                 </div>
             </div>
             <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="public/img/testimonial-3.jpg" style="width: 100px; height: 100px;" alt="Snorkeling">
+                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ asset ('img/testimonial-3.jpg')}}" style="width: 100px; height: 100px;" alt="Snorkeling">
                 <div class="testimonial-text rounded text-center p-4">
                     <p>We went fishing, very good experience, we caught more or less 7kg in 3 hours. Prices are really reasonable as well. We saw some crocodiles too. Very friendly people</p>
                     <h5 class="mb-1">Sam Ravesloot</h5>

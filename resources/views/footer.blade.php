@@ -62,21 +62,21 @@
 
 <!-- WhatsApp Floating Button -->
 <a href="#" id="whatsappFloatBtn" class="whatsapp-float">
-    <img src="public/img/whatsapp_l_size.png" alt="Chat on WhatsApp">
+    <img src="{{ asset ('img/whatsapp_l_size.png')}}" alt="Chat on WhatsApp"> 
 </a>
 
 <!-- custom js file link  -->
-<script type="text/javascript" src="{{('public/js/script.js')}}"></script>
+<script type="text/javascript" src="{{ asset ('js/script.js')}}"></script> 
 
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{('public/lib/wow/wow.min.js')}}"></script>
-<script src="{{('public/lib/easing/easing.min.js')}}"></script>
-<script src="{{('public/lib/waypoints/waypoints.min.js')}}"></script>
-<script src="{{('public/lib/counterup/counterup.min.js')}}"></script>
-<script src="{{('public/lib/owlcarousel/owl.carousel.min.js')}}"></script>
-<script src="{{('public/lib/lightbox/js/lightbox.min.js')}}"></script>
+<script src="{{ asset ('lib/wow/wow.min.js')}}"></script> 
+<script src="{{ asset ('lib/easing/easing.min.js')}}"></script>
+<script src="{{ asset ('lib/waypoints/waypoints.min.js')}}"></script> 
+<script src="{{ asset ('lib/counterup/counterup.min.js')}}"></script> 
+<script src="{{ asset ('lib/owlcarousel/owl.carousel.min.js')}}"></script> 
+<script src="{{ asset ('lib/lightbox/js/lightbox.min.js')}}"></script> 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5001082046759897"
      crossorigin="anonymous"></script>
