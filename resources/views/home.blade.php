@@ -7,7 +7,7 @@
         <div class="carousel-item active">
             <video class="w-100" autoplay muted loop playsinline>
                 <source src="public/img/BlueWhale01.MP4" type="video/mp4">
-                Your browser does not support the video tag.
+                Your browser does not support the video tag.s
             </video>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
