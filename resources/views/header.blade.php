@@ -7,7 +7,7 @@
     <meta name="description" content="Dive into the beauty of Mirissa Bay with our Diving, Snorkeling, and Blue Whale Tours">
     <title>Mirissa Bay Diving Snorkeling and Blue Whale Tour</title>
     <link rel="canonical" href="{{ url()->current() }}" />
-    <link rel="icon" type="image/x-icon" href="{{('public/img/favicon.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset ('img/favicon.png')}}">  
 
     <meta property="og:title" content="Mirissa Bay Diving Snorkeling and Blue Whale Tour" />
     <meta property="og:type" content="website" />
@@ -81,15 +81,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- CSS Libraries -->
-    <link href="{{('public/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    <link href="{{('public/lib/animate/animate.min.css')}}" rel="stylesheet">
-    <link href="{{('public/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+    <link href="{{ asset ('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ asset ('lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ asset ('lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset ('css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="public/css/style.css" rel="stylesheet">
+    <link href="{{ asset ('css/style.css')}}" rel="stylesheet">
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -102,8 +102,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- JS Libraries -->
-    <script src="{{('public/lib/wow/wow.min.js')}}"></script>
-    <script src="{{('public/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset ('lib/wow/wow.min.js')}}"></script> 
+    <script src="{{ asset ('lib/owlcarousel/owl.carousel.min.js')}}"></script> 
 
     <!-- Swipper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -170,7 +170,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
         <div class="logo">
             <a href="/">
-                <img src="{{('public/img/logoN.png')}}" alt="Logo">
+                <img src="{{ asset ('img/logoN.png')}}" alt="Logo"> 
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
