@@ -196,7 +196,7 @@
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-8.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Free diving</h4>
+                            <h4>Diving</h4>
                             <hr class="text-primary w-50 mx-auto mt-0">
                             <div class="d-flex justify-content-between mb-3"><span>Pickup All Day</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
@@ -245,26 +245,14 @@
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-11.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Fun Diving</h4>
+                            <h4>Surf Lesson</h4>
                             <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Pickup 8.30 - 2.00</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>1 1/2 Hrs</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Water Bottle</span><i class="fa fa-check text-primary pt-1"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-12.jpg')}}" alt="Snorkeling">
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Reef Diving</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Pickup 8.30 - 12.30 Drop</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>2 diving or 3,4 diving</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Water Bottle</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Starting 8am 2pm and Drop</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Takes around 1.5 to 2 hours</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Choose 3 Beaches</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Surfboard & Guide</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
                         </div>
                     </div>
 
