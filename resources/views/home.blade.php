@@ -362,50 +362,111 @@
 </div>
 <!-- Gallery End -->
 
-<style>
-    .testimonial-item {
-        min-height: 400px; /* Adjust the value as needed */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .testimonial-text {
-        flex-grow: 1;
-    }
-</style>
-
 <!-- Reviews Start -->
-<div class="container-xxl py-2" id="reviews_section">
-    <div class="container">
-        <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-            <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
-            <h2 class="display-6 mb-0">What Clients Say About Us</h2>
+<div class="container" id="reviews_section">
+    <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
+        <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
+        <h2 class="display-6 mb-0">What Clients Say About Us</h2>
+    </div>
+    
+    <div class="reviews-container">
+        <div class="reviews-header">
+            <div class="google-rating">
+                <div class="rating-number">4.9</div>
+                <div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="rating-text">Based on 178 Google reviews</div>
+                </div>
+            </div>
+            
+            <button class="add-review-btn" onclick="window.open('https://search.google.com/local/writereview?placeid=ChIJxzws0JsV4ToRIKR5SoLdXE8', '_blank')">
+                <i class="fab fa-google"></i> Add Google Review
+            </button>
         </div>
-        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-            <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ asset (env('ASSET_PREFIX', '').'img/testimonial-1.jpg')}}" style="width: 100px; height: 100px;" alt="Snorkeling">
-                <div class="testimonial-text rounded text-center p-4">
-                    <p>Brilliant snorkelling experience! Picked up from Marisa beach and taken to a private beach to swim with the turtles, stopping to get seaweed (turtles favourite snack!) on the way. Thank you for an amazing experience!</p>
-                    <h5 class="mb-1">Hannah Kalyan</h5>
-                    <span class="fst-italic">Profession</span>
+        
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <img class="reviewer-avatar" src="{{ asset (env('ASSET_PREFIX', '').'img/review-1.png')}}" alt="Kiran H">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Kiran H</div>
+                        <div class="review-date">2 weeks ago</div>
+                    </div>
+                    <div class="google-logo">Google</div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-content">
+                    We had an amazing experience with Mirissa Bay. We went on a turtle snorkeling tour. My wife had the best experience. We saw the turtles so close and even got the chance to touch. Guide was very helpful and made sure we are ok. Great price! Great experience! Highly recommended.
+                </p>
+                <div class="review-images">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-4.jpg')}}" alt="Review-04">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-5.jpg')}}" alt="Review-05">
+                </div>
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
             </div>
-            <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ asset (env('ASSET_PREFIX', '').'img/testimonial-2.jpg')}}" style="width: 100px; height: 100px;" alt="Snorkeling">
-                <div class="testimonial-text rounded text-center p-4">
-                    <p>The owner Krishantha is such an experienced diver, surfer and the list goes on. He knows all the very best spots for whale watching. I’m definitely returning to Mirissa just for a second round. Could not have asked for a better experience.</p>
-                    <h5 class="mb-1">Tahsin Saira</h5>
-                    <span class="fst-italic">Profession</span>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <img class="reviewer-avatar" src="{{ asset (env('ASSET_PREFIX', '').'img/review-2.png')}}" alt="Payal Suthar">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Payal Suthar</div>
+                        <div class="review-date">a month ago</div>
+                    </div>
+                    <div class="google-logo">Google</div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-content">
+                    Tried snorkeling for the first time and it was magical! I was nervous at first, but once I got into the water, I was blown away by the size of the turtle. Breathing through the snorkel felt weird at first, but I got used to it quickly. The guides were super helpful and made me feel safe. It was peaceful, beautiful, and something I’ll never forget. Can’t wait to do it again!
+                </p>
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
             </div>
-            <div class="testimonial-item text-center">
-                <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="{{ asset (env('ASSET_PREFIX', '').'img/testimonial-3.jpg')}}" style="width: 100px; height: 100px;" alt="Snorkeling">
-                <div class="testimonial-text rounded text-center p-4">
-                    <p>We went fishing, very good experience, we caught more or less 7kg in 3 hours. Prices are really reasonable as well. We saw some crocodiles too. Very friendly people</p>
-                    <h5 class="mb-1">Sam Ravesloot</h5>
-                    <span class="fst-italic">Profession</span>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <img class="reviewer-avatar" src="{{ asset (env('ASSET_PREFIX', '').'img/review-3.png')}}" alt="Review-05">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Nithish kumar</div>
+                        <div class="review-date">5 months ago</div>
+                    </div>
+                    <div class="google-logo">Google</div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="review-content">
+                    Me & my partner had an incredible time doing snorkeling with them. It was an amazing experience. We both don’t know swimming but the guide helped us so much and showed us lots of variety of fishes and we even touched a turtle. 100% recommend them. They also have a small place nearby to shower to change clothes.😁👌🏻
+                </p>
+                <div class="review-images">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-6.jpg')}}" alt="Fishing trip">
+                </div>
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
             </div>
         </div>
