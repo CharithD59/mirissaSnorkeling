@@ -91,7 +91,7 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="section-title position-relative pb-3 mb-3">
-                    <h5 class="fw-bold text-primary text-uppercase">About Uss</h5>
+                    <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
                     <h1 class="display-6 mb-0">Let us make your diving experience unforgettable</h1>
                 </div>
                 <p class="mb-4">Dive into the beauty of Mirissa Bay with our Diving, Snorkeling, and Blue Whale Tours. Discover vibrant coral reefs, swim with colorful marine life, and experience the awe of seeing majestic blue whales. Perfect for adventurers and nature lovers, we promise an unforgettable ocean experience.</p>
@@ -293,9 +293,9 @@
                         </a>
                     </div>
                     <div class="col-12">
-                        <a class="animal-item" href="{{ asset (env('ASSET_PREFIX', '').'img/gallery-2.jpg')}}" data-lightbox="animal">
+                        <a class="animal-item" href="{{ asset (env('ASSET_PREFIX', '').'img/gallery-2.jpeg')}}" data-lightbox="animal">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset (env('ASSET_PREFIX', '').'img/gallery-2.jpg')}}" alt="Snorkeling" />
+                                <img class="img-fluid" src="{{ asset (env('ASSET_PREFIX', '').'img/gallery-2.jpeg')}}" alt="Snorkeling" />
                                 <div class="animal-text p-4">
                                     <p class="text-white small text-uppercase mb-0">12/09/2024</p>
                                     <h5 class="text-white mb-0">Mirissa sri lanka</h5>
@@ -372,8 +372,8 @@
     <div class="reviews-container">
         <div class="reviews-header">
             <div class="google-rating">
-                <div class="rating-number">4.9</div>
                 <div>
+                    <div class="rating-number">EXCELLENT</div>
                     <div class="rating-stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -381,24 +381,39 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="rating-text">Based on 178 Google reviews</div>
+                    <div class="rating-text">Based on 180 Google reviews</div>
                 </div>
             </div>
             
-            <button class="add-review-btn" onclick="window.open('https://search.google.com/local/writereview?placeid=ChIJxzws0JsV4ToRIKR5SoLdXE8', '_blank')">
-                <i class="fab fa-google"></i> Add Google Review
-            </button>
+            <div class="review-buttons">
+                <button class="view-reviews-btn" onclick="window.open('https://www.google.com/search?hl=en-LK&gl=lk&q=Mirissa+Bay+Diving+Blue+Whale+Turtle+Snorkeling,+Badugoda,+R.+Situm,+214,+A2,+Mirissa&ludocid=5718689178518660128&lsig=AB86z5V5df7w480jxPbg3AgRGDEO#lrd=0x3ae1159bd02c3cc7:0x4f5cdd824a79a420,1,,,,', '_blank')">
+                    <i class="fas fa-star"></i> View Google Reviews
+                </button>
+                
+                <button class="add-review-btn" onclick="window.open('https://search.google.com/local/writereview?placeid=ChIJxzws0JsV4ToRIKR5SoLdXE8', '_blank')">
+                    <i class="fab fa-google"></i> Add Google Review
+                </button>
+            </div>
         </div>
         
-        <div class="reviews-grid">
-            <div class="review-card">
+        <!-- Carousel Container -->
+        <div class="reviews-carousel owl-carousel owl-theme">
+            <!-- Review 1 -->
+            <div class="review-card item">
                 <div class="review-header">
-                    <img class="reviewer-avatar" src="{{ asset (env('ASSET_PREFIX', '').'img/review-1.png')}}" alt="Kiran H">
                     <div class="reviewer-info">
                         <div class="reviewer-name">Kiran H</div>
-                        <div class="review-date">2 weeks ago</div>
+                        <div class="review-date">3 weeks ago</div>
                     </div>
-                    <div class="google-logo">Google</div>
+                    <div class="google-logo">
+                        <div class="google-g">
+                            <div class="g-line"></div>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="blue"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="review-stars">
                     <i class="fas fa-star"></i>
@@ -419,14 +434,22 @@
                 </div>
             </div>
             
-            <div class="review-card">
+            <!-- Review 2 -->
+            <div class="review-card item">
                 <div class="review-header">
-                    <img class="reviewer-avatar" src="{{ asset (env('ASSET_PREFIX', '').'img/review-2.png')}}" alt="Payal Suthar">
                     <div class="reviewer-info">
                         <div class="reviewer-name">Payal Suthar</div>
                         <div class="review-date">a month ago</div>
                     </div>
-                    <div class="google-logo">Google</div>
+                    <div class="google-logo">
+                        <div class="google-g">
+                            <div class="g-line"></div>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="blue"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="review-stars">
                     <i class="fas fa-star"></i>
@@ -436,31 +459,43 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="review-content">
-                    Tried snorkeling for the first time and it was magical! I was nervous at first, but once I got into the water, I was blown away by the size of the turtle. Breathing through the snorkel felt weird at first, but I got used to it quickly. The guides were super helpful and made me feel safe. It was peaceful, beautiful, and something I’ll never forget. Can’t wait to do it again!
+                    Tried snorkeling for the first time and it was magical! I was nervous at first, but once I got into the water, I was blown away by the size of the turtle. Breathing through the snorkel felt weird at first, but I got used to it quickly. The guides were super helpful and made me feel safe. It was peaceful, beautiful, and something I'll never forget. Can't wait to do it again!
                 </p>
+                <div class="review-images">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-7.webp')}}" alt="Review-04">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-8.webp')}}" alt="Review-05">
+                </div>
                 <div class="review-helpful">
                     <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
             </div>
             
-            <div class="review-card">
+            <!-- Review 3 -->
+            <div class="review-card item">
                 <div class="review-header">
-                    <img class="reviewer-avatar" src="{{ asset (env('ASSET_PREFIX', '').'img/review-3.png')}}" alt="Review-05">
                     <div class="reviewer-info">
                         <div class="reviewer-name">Nithish kumar</div>
                         <div class="review-date">5 months ago</div>
                     </div>
-                    <div class="google-logo">Google</div>
+                    <div class="google-logo">
+                        <div class="google-g">
+                            <div class="g-line"></div>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="blue"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="review-stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 <p class="review-content">
-                    Me & my partner had an incredible time doing snorkeling with them. It was an amazing experience. We both don’t know swimming but the guide helped us so much and showed us lots of variety of fishes and we even touched a turtle. 100% recommend them. They also have a small place nearby to shower to change clothes.😁👌🏻
+                    Me & my partner had an incredible time doing snorkeling with them. It was an amazing experience. We both don't know swimming but the guide helped us so much and showed us lots of variety of fishes and we even touched a turtle. 100% recommend them. They also have a small place nearby to shower to change clothes.😁👌🏻
                 </p>
                 <div class="review-images">
                     <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-6.jpg')}}" alt="Fishing trip">
@@ -469,10 +504,211 @@
                     <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
             </div>
+
+            <!-- Review 4 -->
+            <div class="review-card item">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Guillem Pifarré Gallart</div>
+                        <div class="review-date">4 Weeks ago</div>
+                    </div>
+                    <div class="google-logo">
+                        <div class="google-g">
+                            <div class="g-line"></div>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="blue"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-content">
+                    An unforgettable experience! We did the whale snorkeling tour and it was simply spectacular. Seeing these amazing animals up close in their natural habitat was truly magical. Everything was very well organized, and it was clear that there was a deep respect for nature throughout the experience. We especially want to highlight the attention of our guide — he was super professional, friendly, and always attentive to our safety and comfort. He explained everything with so much passion, and it was obvious that he loves what he does. We would do it again without hesitation!
+                </p>
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-card item">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Jack Levis</div>
+                        <div class="review-date">1 months ago</div>
+                    </div>
+                    <div class="google-logo">
+                        <div class="google-g">
+                            <div class="g-line"></div>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="blue"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-content">
+                    Had an amazing day. We were picked up from our hotel and dropped off. Although the time Of season we went and only 1 turtle was there, our guide was amazing and tried his best to show us everything. We saw many cool fish too. We received great videos and Photos that our guide took. Everyone was very nice I would highly recommend 👍👍
+                </p>
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
+                </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-card item">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Mohammed Amine</div>
+                        <div class="review-date">3 weeks ago</div>
+                    </div>
+                    <div class="google-logo">
+                        <div class="google-g">
+                            <div class="g-line"></div>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="blue"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-content">
+                    It was great. The staff are experienced swimmers. It’s totally worth it especially on a sunny day in the dry season as visibility is very high!
+                </p>
+                <div class="review-images">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-9.webp')}}" alt="Review-04">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-10.webp')}}" alt="Review-05">
+                </div>
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
+                </div>
+            </div>
+
+            <!-- Review 7 -->
+            <div class="review-card item">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Sheetal Adhalakha</div>
+                        <div class="review-date">5 months ago</div>
+                    </div>
+                    <div class="google-logo">
+                        <div class="google-g">
+                            <div class="g-line"></div>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="blue"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-content">
+                    In my recent trip to Srilanka, wanted to learn to Surf as I had never tried before. Spoke to the guide at Mirissa Bay Diving centre and he was professional and we decided to do the surf sessions at Weligama bay as that’s more appropriate for beginners.Guide was friendly and strict and I really recommended this centre for the experience of the guide. Thankyou very much 😊
+                </p>
+                <div class="review-images">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-11.webp')}}" alt="Review-04">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-12.webp')}}" alt="Review-05">
+                </div>
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
+                </div>
+            </div>
+
+            <!-- Review 8 -->
+            <div class="review-card item">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Manan GADA</div>
+                        <div class="review-date">4 months ago</div>
+                    </div>
+                    <div class="google-logo">
+                        <div class="google-g">
+                            <div class="g-line"></div>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                            <span class="blue"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-content">
+                    My 3 friends and I had an unforgettable time snorkeling with them! Even though none of us know how to swim, the guide was incredibly patient and made us feel safe throughout. We saw so many colorful fish—and even got to touch a turtle! Truly a magical experience. Highly recommend it! Plus, they have a small spot nearby to shower and change after the adventure, which was super convenient.
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 <!-- Reviews End -->
+
+<!-- Add Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- Add jQuery and Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.reviews-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
 
 <!-- Contact Start -->
 <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s" id="contact_section">
