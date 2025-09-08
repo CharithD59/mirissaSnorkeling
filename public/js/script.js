@@ -54,11 +54,35 @@
 
 
     // Facts counter
-    // $('[data-toggle="counter-up"]').counterUp({
-    //     delay: 10,
-    //     time: 2000
-    // });
-    
+    $('[data-toggle="counter-up"]').each(function() {
+        var $this = $(this);
+        var originalText = $this.text();
+        
+        // Extract number and suffix
+        var num = parseInt(originalText.replace(/\D/g, ''), 10);
+        var suffix = originalText.replace(/\d/g, '');
+        
+        // Only animate when element is visible (on scroll)
+        var triggered = false;
+        $(window).on('scroll', function() {
+            var top = $this.offset().top;
+            var scroll = $(window).scrollTop() + $(window).height();
+            if (!triggered && scroll > top) {
+                triggered = true;
+                $({ Counter: 0 }).animate({ Counter: num }, {
+                    duration: 2000, // time
+                    easing: 'swing',
+                    step: function(now) {
+                        $this.text(Math.ceil(now) + suffix);
+                    },
+                    // delay between each step
+                    progress: function(animation, progress, remainingMs) {
+                        setTimeout(function(){}, 10); // small delay for smoother counting
+                    }
+                });
+            }
+        });
+    });
     
       // Back to top button
       $(window).scroll(function () {

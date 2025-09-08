@@ -25,7 +25,7 @@
             </video>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Love It.Save It.Dive.It</h5>
+                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Blue Whale Tours</h5>
                     <h2 class="display-2 text-white mb-md-4 animated zoomIn">Mirissa Bay Diving Snorkeling and Blue Whale Tour</h2>
                     <a href="view_booking_page" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book Now</a>
                     <a href="/#contact_section" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-5">
                     <a href="#" id="whatsappBtn" class="btn wantToWork-btn btn btn-primary py-3 px-5">
-                        <img src="public/img/whatsapp_s_size.png" alt=""> Chat on WhatsApp
+                        <img src="{{ asset (env('ASSET_PREFIX', '').'img/whatsapp_s_size.png')}}" alt=""> Chat on WhatsApp
                     </a>
                 </div>
             </div>
@@ -119,7 +119,7 @@
 </div>
 <!-- About End -->
 
- <!-- Services Start -->
+<!-- Services Start -->
  <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s" id="services_section">
     <div class="container">
         <div class="row g-2">
@@ -191,7 +191,7 @@
                         </div>
                     </div>
 
-                    <div class="price-item pb-4">
+                    <!-- <div class="price-item pb-4">
                         <div class="position-relative">
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-8.jpg')}}" alt="Snorkeling">
                         </div>
@@ -205,7 +205,7 @@
                             <div class="d-flex justify-content-between mb-3"><span>Fruit</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
@@ -240,7 +240,7 @@
                         </div>
                     </div>
 
-                    <div class="price-item pb-4">
+                    <!-- <div class="price-item pb-4">
                         <div class="position-relative">
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-11.jpg')}}" alt="Snorkeling">
                         </div>
@@ -254,7 +254,7 @@
                             <div class="d-flex justify-content-between mb-3"><span>Surfboard & Guide</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -262,6 +262,72 @@
     </div>
 </div>
 <!-- Services End -->
+
+<!-- Why Choose Us Start -->
+
+<div class="container-fluid py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column: Text -->
+            <div class="col-lg-6 mb-5">
+                <small class="bg-primary text-white text-uppercase font-weight-bold px-2 py-1 rounded">Why Choose Us</small>
+                <h1 class="mt-3 mb-3">Your Ultimate Marine Adventure in Mirissa</h1>
+                <p class="text-muted mb-4">
+                    Enjoy a safe, comfortable, and unforgettable adventure on the waters of Mirissa with our expert team.
+                </p>
+                <div class="mb-4">
+                    <p class="mb-2">
+                        <i class="fa fa-check-circle text-primary me-2"></i>Eco-Friendly & Safe Marine Experiences
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-check-circle text-primary me-2"></i>Professional & Experienced Crew
+                    </p>
+                </div>
+                <a href="/view_booking_page" class="btn btn-primary btn-lg">Book Your Adventure</a>
+            </div>
+
+            <!-- Right Column: Stats Cards -->
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <div class="col-sm-6">
+                        <div class="card shadow-sm text-center border-0 rounded-3 p-4 hover-shadow">
+                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">20+</h2>
+                            <p class="fw-bold mb-0">Years of Experience</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card shadow-sm text-center border-0 rounded-3 p-4 hover-shadow">
+                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">8960+</h2>
+                            <p class="fw-bold mb-0">Happy Travelers</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card shadow-sm text-center border-0 rounded-3 p-4 hover-shadow">
+                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">25+</h2>
+                            <p class="fw-bold mb-0">Adventure Options</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card shadow-sm text-center border-0 rounded-3 p-4 hover-shadow">
+                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">100%</h2>
+                            <p class="fw-bold mb-0">Eco-Friendly & Safe Tours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+</style>
+
+<!-- Why Choose Us End -->
 
 <!-- Gallery Start -->
 <div class="container-xxl py-3" id="gallery_section">
@@ -371,30 +437,38 @@
     
     <div class="reviews-container">
         <div class="reviews-header">
-            <div class="google-rating">
-                <div>
-                    <div class="rating-number">EXCELLENT</div>
-                    <div class="rating-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="rating-text">Based on 180 Google reviews</div>
+        <div class="google-rating">
+            <div>
+                <div class="rating-number">EXCELLENT</div>
+                <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-            </div>
-            
-            <div class="review-buttons">
-                <button class="view-reviews-btn" onclick="window.open('https://www.google.com/search?hl=en-LK&gl=lk&q=Mirissa+Bay+Diving+Blue+Whale+Turtle+Snorkeling,+Badugoda,+R.+Situm,+214,+A2,+Mirissa&ludocid=5718689178518660128&lsig=AB86z5V5df7w480jxPbg3AgRGDEO#lrd=0x3ae1159bd02c3cc7:0x4f5cdd824a79a420,1,,,,', '_blank')">
-                    <i class="fas fa-star"></i> View Google Reviews
-                </button>
                 
-                <button class="add-review-btn" onclick="window.open('https://search.google.com/local/writereview?placeid=ChIJxzws0JsV4ToRIKR5SoLdXE8', '_blank')">
-                    <i class="fab fa-google"></i> Add Google Review
-                </button>
+                <!-- Google Logo instead of review text -->
+                <a href="https://www.google.com/search?hl=en-LK&gl=lk&q=Mirissa+Bay+Diving+Blue+Whale+Turtle+Snorkeling,+Badugoda,+R.+Situm,+214,+A2,+Mirissa&ludocid=5718689178518660128&lsig=AB86z5V5df7w480jxPbg3AgRGDEO#lrd=0x3ae1159bd02c3cc7:0x4f5cdd824a79a420,1,,,,"
+                target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
+                        alt="Google Reviews" 
+                        style="height: 34px; margin-top: 8px;">
+                </a>
             </div>
         </div>
+        
+        <div class="review-buttons">
+            <button class="view-reviews-btn" onclick="window.open('https://www.google.com/search?hl=en-LK&gl=lk&q=Mirissa+Bay+Diving+Blue+Whale+Turtle+Snorkeling,+Badugoda,+R.+Situm,+214,+A2,+Mirissa&ludocid=5718689178518660128&lsig=AB86z5V5df7w480jxPbg3AgRGDEO#lrd=0x3ae1159bd02c3cc7:0x4f5cdd824a79a420,1,,,,', '_blank')">
+                <i class="fas fa-star"></i> View Google Reviews
+            </button>
+            
+            <button class="add-review-btn" onclick="window.open('https://search.google.com/local/writereview?placeid=ChIJxzws0JsV4ToRIKR5SoLdXE8', '_blank')">
+                <i class="fab fa-google"></i> Add Google Review
+            </button>
+        </div>
+    </div>
+
         
         <!-- Carousel Container -->
         <div class="reviews-carousel owl-carousel owl-theme">

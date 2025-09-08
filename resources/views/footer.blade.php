@@ -7,10 +7,10 @@
                 <h2 class="display-6 fw-bold text-primary mb-4">Mirissa<span class="text-white">BayDiving</span></h2>
                 <p>Discover the wonders of Mirissa Bay with our exceptional diving, snorkeling, and blue whale tours. Explore vibrant coral reefs and witness majestic marine life for an unforgettable adventure</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square me-1" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square me-1" href="https://www.facebook.com/mirissabaydiving" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square me-1" href="https://www.instagram.com/srilankabluewhalesnorkeling?igsh=MWl1OHl2YzdjaDhmYg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-square me-1" href="https://www.google.com/maps?ll=5.944071,80.460657&z=16&t=m&hl=en&gl=LK&mapclient=embed&cid=5718689178518660128" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -65,9 +65,6 @@
     <img src="{{ asset (env('ASSET_PREFIX', '').'img/whatsapp_l_size.png')}}" alt="Chat on WhatsApp"> 
 </a>
 
-<!-- custom js file link  -->
-<script type="text/javascript" src="{{ asset (env('ASSET_PREFIX', '').'js/script.js')}}"></script> 
-
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -76,7 +73,9 @@
 <script src="{{ asset (env('ASSET_PREFIX', '').'lib/waypoints/waypoints.min.js')}}"></script> 
 <script src="{{ asset (env('ASSET_PREFIX', '').'lib/counterup/counterup.min.js')}}"></script> 
 <script src="{{ asset (env('ASSET_PREFIX', '').'lib/owlcarousel/owl.carousel.min.js')}}"></script> 
-<script src="{{ asset (env('ASSET_PREFIX', '').'lib/lightbox/js/lightbox.min.js')}}"></script> 
+
+<!-- custom js file link  -->
+<script type="text/javascript" src="{{ asset (env('ASSET_PREFIX', '').'js/script.js')}}"></script> 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5001082046759897"
      crossorigin="anonymous"></script>
