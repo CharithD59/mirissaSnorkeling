@@ -83,7 +83,6 @@
     <!-- CSS Libraries -->
     <link href="{{ asset (env('ASSET_PREFIX', '').'lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
     <link href="{{ asset (env('ASSET_PREFIX', '').'lib/animate/animate.min.css')}}" rel="stylesheet">
-    <link href="{{ asset (env('ASSET_PREFIX', '').'lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset (env('ASSET_PREFIX', '').'css/bootstrap.min.css')}}" rel="stylesheet">
