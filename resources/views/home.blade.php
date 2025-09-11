@@ -476,43 +476,7 @@
             <div class="review-card item">
                 <div class="review-header">
                     <div class="reviewer-info">
-                        <div class="reviewer-name">Kiran H</div>
-                        <div class="review-date">3 weeks ago</div>
-                    </div>
-                    <div class="google-logo">
-                        <div class="google-g">
-                            <div class="g-line"></div>
-                            <span class="red"></span>
-                            <span class="yellow"></span>
-                            <span class="green"></span>
-                            <span class="blue"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="review-content">
-                    We had an amazing experience with Mirissa Bay. We went on a turtle snorkeling tour. My wife had the best experience. We saw the turtles so close and even got the chance to touch. Guide was very helpful and made sure we are ok. Great price! Great experience! Highly recommended.
-                </p>
-                <div class="review-images">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-4.jpg')}}" alt="Review-04">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-5.jpg')}}" alt="Review-05">
-                </div>
-                <div class="review-helpful">
-                    <i class="far fa-thumbs-up"></i> People found this helpful
-                </div>
-            </div>
-            
-            <!-- Review 2 -->
-            <div class="review-card item">
-                <div class="review-header">
-                    <div class="reviewer-info">
-                        <div class="reviewer-name">Payal Suthar</div>
+                        <div class="reviewer-name">Mikal Mikal</div>
                         <div class="review-date">a month ago</div>
                     </div>
                     <div class="google-logo">
@@ -533,18 +497,19 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="review-content">
-                    Tried snorkeling for the first time and it was magical! I was nervous at first, but once I got into the water, I was blown away by the size of the turtle. Breathing through the snorkel felt weird at first, but I got used to it quickly. The guides were super helpful and made me feel safe. It was peaceful, beautiful, and something I'll never forget. Can't wait to do it again!
+                    Really good experience.we had a great time we found this guy name krishanta he told us we can see whales, dolphins and turtles so we booked a tour form him he picked us up from our hotel at 6.00 o clock in the morning then he bring us to his diving centre then he give us the equipment like life jackets then we got in to his boat
+                    after 30 minutes we saw our first whale so we started the snorkeling after 45 minutes we lost the whale so krishanta start searching he called his friend and got a location for a whale after 30 minutes we could not find a whale but we found a group of dolphins and we started speaking them after like 1 hour krishanta got a call from his friend they found whale so we started moving 40 minutes late we got to see the most beautiful thing in our lives
+                    there was 3 whales in same place in the rest of our time we started snowing them after 2 hours we had to head back so we started to head back when we are in the beach I asked krishanta we didn't see any turtles and he told we are going to see them now and told us jump  in to the water and we saw 10 to 15 turtles
+                    This the best day of my life
+
+                    High recommended!!
                 </p>
-                <div class="review-images">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-7.webp')}}" alt="Review-04">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-8.webp')}}" alt="Review-05">
-                </div>
                 <div class="review-helpful">
                     <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
             </div>
-            
-            <!-- Review 3 -->
+
+            <!-- Review 2 -->
             <div class="review-card item">
                 <div class="review-header">
                     <div class="reviewer-info">
@@ -569,121 +534,69 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="review-content">
-                    Me & my partner had an incredible time doing snorkeling with them. It was an amazing experience. We both don't know swimming but the guide helped us so much and showed us lots of variety of fishes and we even touched a turtle. 100% recommend them. They also have a small place nearby to shower to change clothes.😁👌🏻
+                    Chartering his boat for 8 days.
+                </p>
+                <p class="review-content">
+                    Happy new year 2020 with Blue Whale, The Biggest Sea Mammal in the world,  this year as well !!! Great trip here in Mirissa.
+                </p>
+                <p class="review-content">
+                   Chartering his boat for 7 days.
+                </p>
+                <p class="review-content">
+                    Kesa, the owner, is definitely the Best Skipper in Mirissa area. A lot of diving-service-shop-skippers call to him everyday to get some information before their going to the sea. Best for whale watching and photographing.
                 </p>
                 <div class="review-images">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-6.jpg')}}" alt="Fishing trip">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-14.png')}}" alt="Fishing trip">
                 </div>
                 <div class="review-helpful">
                     <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
             </div>
 
+            <!-- Review 3 -->
+            <div class="review-card item">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">Lilian G</div>
+                        <div class="review-date">Reviewed April 8, 2019</div>
+                    </div>
+                    <div class="tripadvisor-logo">
+                        <div class="owl">
+                            <div class="eye left">
+                            <div class="pupil"></div>
+                            </div>
+                            <div class="eye right">
+                            <div class="pupil"></div>
+                            </div>
+                        </div>
+                        <span class="text">Tripadvisor</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-content">
+                    We had a full day with Skipper and his friend on the sea. At first we sailed for 2-3 hours on the sea to wait until the big boats went back to the harbor from whale watching. After that we soon saw 1 big whale which we snorkeled with. Two images below are from that first dive! So that was really worth waiting for, but the day became even better when we found another whale alone. We could have a really good look under water at the biggest creature on earth! After that we saw a whale couple, and followed them for a long time. One of them even swam really close under the boat! Skipper and his friend are real experts and really made this an unforgettable experience!!
+                    Allow yourself a once in a lifetime experience, wait and trust on Skipper and his friend. It can be a bumpy ride when the sea is rough, so be prepared and don’t forget to bring sun cream!
+                </p>
+                <div class="review-images">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-15.jpg')}}" alt="Review-04">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-16.jpg')}}" alt="Review-05">
+                </div>
+                <div class="review-helpful">
+                    <i class="far fa-thumbs-up"></i> People found this helpful
+                </div>
+            </div>
+            
             <!-- Review 4 -->
             <div class="review-card item">
                 <div class="review-header">
                     <div class="reviewer-info">
-                        <div class="reviewer-name">Guillem Pifarré Gallart</div>
-                        <div class="review-date">4 Weeks ago</div>
-                    </div>
-                    <div class="google-logo">
-                        <div class="google-g">
-                            <div class="g-line"></div>
-                            <span class="red"></span>
-                            <span class="yellow"></span>
-                            <span class="green"></span>
-                            <span class="blue"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="review-content">
-                    An unforgettable experience! We did the whale snorkeling tour and it was simply spectacular. Seeing these amazing animals up close in their natural habitat was truly magical. Everything was very well organized, and it was clear that there was a deep respect for nature throughout the experience. We especially want to highlight the attention of our guide — he was super professional, friendly, and always attentive to our safety and comfort. He explained everything with so much passion, and it was obvious that he loves what he does. We would do it again without hesitation!
-                </p>
-                <div class="review-helpful">
-                    <i class="far fa-thumbs-up"></i> People found this helpful
-                </div>
-            </div>
-
-            <!-- Review 5 -->
-            <div class="review-card item">
-                <div class="review-header">
-                    <div class="reviewer-info">
-                        <div class="reviewer-name">Jack Levis</div>
-                        <div class="review-date">1 months ago</div>
-                    </div>
-                    <div class="google-logo">
-                        <div class="google-g">
-                            <div class="g-line"></div>
-                            <span class="red"></span>
-                            <span class="yellow"></span>
-                            <span class="green"></span>
-                            <span class="blue"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="review-content">
-                    Had an amazing day. We were picked up from our hotel and dropped off. Although the time Of season we went and only 1 turtle was there, our guide was amazing and tried his best to show us everything. We saw many cool fish too. We received great videos and Photos that our guide took. Everyone was very nice I would highly recommend 👍👍
-                </p>
-                <div class="review-helpful">
-                    <i class="far fa-thumbs-up"></i> People found this helpful
-                </div>
-            </div>
-
-            <!-- Review 6 -->
-            <div class="review-card item">
-                <div class="review-header">
-                    <div class="reviewer-info">
-                        <div class="reviewer-name">Mohammed Amine</div>
-                        <div class="review-date">3 weeks ago</div>
-                    </div>
-                    <div class="google-logo">
-                        <div class="google-g">
-                            <div class="g-line"></div>
-                            <span class="red"></span>
-                            <span class="yellow"></span>
-                            <span class="green"></span>
-                            <span class="blue"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="review-content">
-                    It was great. The staff are experienced swimmers. It’s totally worth it especially on a sunny day in the dry season as visibility is very high!
-                </p>
-                <div class="review-images">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-9.webp')}}" alt="Review-04">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-10.webp')}}" alt="Review-05">
-                </div>
-                <div class="review-helpful">
-                    <i class="far fa-thumbs-up"></i> People found this helpful
-                </div>
-            </div>
-
-            <!-- Review 7 -->
-            <div class="review-card item">
-                <div class="review-header">
-                    <div class="reviewer-info">
-                        <div class="reviewer-name">Sheetal Adhalakha</div>
+                        <div class="reviewer-name">Siddharth Kotamraju</div>
                         <div class="review-date">5 months ago</div>
                     </div>
                     <div class="google-logo">
@@ -704,32 +617,33 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="review-content">
-                    In my recent trip to Srilanka, wanted to learn to Surf as I had never tried before. Spoke to the guide at Mirissa Bay Diving centre and he was professional and we decided to do the surf sessions at Weligama bay as that’s more appropriate for beginners.Guide was friendly and strict and I really recommended this centre for the experience of the guide. Thankyou very much 😊
+                    Best experience. Kesa was very helpful and we got great views underwater. With good quality video. Best place to watch Blue whales and snorkel with them.
                 </p>
                 <div class="review-images">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-11.webp')}}" alt="Review-04">
-                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-12.webp')}}" alt="Review-05">
+                    <img class="review-image" src="{{ asset (env('ASSET_PREFIX', '').'img/review-13.jpg')}}" alt="Review-04">
                 </div>
                 <div class="review-helpful">
                     <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
             </div>
 
-            <!-- Review 8 -->
+            <!-- Review 5 -->
             <div class="review-card item">
                 <div class="review-header">
                     <div class="reviewer-info">
-                        <div class="reviewer-name">Manan GADA</div>
-                        <div class="review-date">4 months ago</div>
+                        <div class="reviewer-name">666yuton</div>
+                        <div class="review-date">Reviewed January 10, 2019</div>
                     </div>
-                    <div class="google-logo">
-                        <div class="google-g">
-                            <div class="g-line"></div>
-                            <span class="red"></span>
-                            <span class="yellow"></span>
-                            <span class="green"></span>
-                            <span class="blue"></span>
+                    <div class="tripadvisor-logo">
+                        <div class="owl">
+                            <div class="eye left">
+                            <div class="pupil"></div>
+                            </div>
+                            <div class="eye right">
+                            <div class="pupil"></div>
+                            </div>
                         </div>
+                        <span class="text">Tripadvisor</span>
                     </div>
                 </div>
                 <div class="review-stars">
@@ -740,7 +654,9 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="review-content">
-                    My 3 friends and I had an unforgettable time snorkeling with them! Even though none of us know how to swim, the guide was incredibly patient and made us feel safe throughout. We saw so many colorful fish—and even got to touch a turtle! Truly a magical experience. Highly recommend it! Plus, they have a small spot nearby to shower and change after the adventure, which was super convenient.
+                    Kesa, the owner, is definitely the Best Skipper in Mirissa area. A lot of diving-service-shop-skippers call to him everyday to get some information before their going to the sea. Best for whale watching and photographing.
+                    See my Instagram account and check out my works here in Mirissa.
+                </p>
                 <div class="review-helpful">
                     <i class="far fa-thumbs-up"></i> People found this helpful
                 </div>
