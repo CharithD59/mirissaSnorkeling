@@ -20,7 +20,7 @@
         </div>
         <div class="carousel-item">
             <video class="w-100" autoplay muted loop playsinline>
-                <source src="{{ asset (env('ASSET_PREFIX', '').'img/Gx015297.mp4')}}" type="video/mp4"> 
+                <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-2.mp4')}}" type="video/mp4"> 
                 Your browser does not support the video tag.
             </video>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -34,7 +34,7 @@
         </div>
         <div class="carousel-item">
             <video class="w-100" autoplay muted loop playsinline>
-                <source src="{{ asset (env('ASSET_PREFIX', '').'img/Gx014893.mp4')}}" type="video/mp4"> 
+                <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-3.mp4')}}" type="video/mp4"> 
                 Your browser does not support the video tag.
             </video>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
