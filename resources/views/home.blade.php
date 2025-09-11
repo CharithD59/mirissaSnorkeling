@@ -61,6 +61,86 @@
 
 <!-- Banner Section Start -->
 
+<section class="banner-section">
+    <div class="banner-container">
+        <div class="banner">
+            <div class="background-pattern"></div>
+            <div class="wave-animation"></div>
+            <div class="whale-illustration">🐋</div>
+            
+            <div class="content-wrapper">
+                <!-- Left: Main Text -->
+                <div class="text-content">
+                    <div class="badge">Marine Wildlife Experience</div>
+                    <h1 style="color: #f0f8ff;">🐋 Blue Whales – The <span class="highlight">Gentle Giants</span> of Mirissa</h1>
+                    
+                    <p class="intro">
+                        Did you know the <strong>Blue Whale</strong> is the largest animal ever to live on Earth 🌍 — even bigger than dinosaurs? 
+                        Join us in Mirissa for an unforgettable adventure with these ocean giants.
+                    </p>
+
+                    <div class="facts-container">
+                        <div class="fact-item">
+                            <div class="fact-icon">📏</div>
+                            <div class="fact-text">22–27 meters long (that’s 3 buses 🚍🚍🚍)</div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon">👩‍🦱</div>
+                            <div class="fact-text">Females are usually larger than males</div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon">🐋</div>
+                            <div class="fact-text">Record: 33 meters long, 150 tons (1926)</div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon">⚖️</div>
+                            <div class="fact-text">As heavy as 2,700 people combined</div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon">❤️</div>
+                            <div class="fact-text">Heart the size of a car 🚗</div>
+                        </div>
+                        <div class="fact-item">
+                            <div class="fact-icon">🔊</div>
+                            <div class="fact-text">Loudest animal on Earth, heard hundreds of km away</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Visual/Extra Info -->
+                <div class="visual-content">
+
+                    <div class="season-info">
+                        <div class="season-icon">🌴</div>
+                        <div class="season-text">
+                            Why <strong>Mirissa</strong>?  
+                            It’s one of the <em>world’s best places</em> to see Blue Whales up close, 
+                            along with Sperm Whales and playful Dolphins 🐬 — just a short ride from shore.
+                        </div>
+                    </div>
+
+                    <div class="season-info">
+                        <div class="season-icon">👉</div>
+                        <div class="season-text">
+                            Join us in <strong>Mirissa</strong> and witness the largest animals on Earth in their natural home.  
+                            A once-in-a-lifetime adventure awaits! 🐋🌊
+                        </div>
+                    </div>
+                    
+                    <br><br>
+                    <a href="view_booking_page" class="cta-button">
+                        Join a Whale Watching Tour 🐋
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Banner Section End -->
+
+<!-- Banner Section Start -->
+
 <section class="container py-3">
     <section class="wantToWork-area" 
         style="background-image: url('{{ asset (env('ASSET_PREFIX', '').'img/section_bg01.png') }}'); background-size: cover; background-position: center;">
