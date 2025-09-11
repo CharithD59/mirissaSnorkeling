@@ -177,7 +177,7 @@
                 <p class="mb-4">Dive into the beauty of Mirissa Bay with our Diving, Snorkeling, and Blue Whale Tours. Discover vibrant coral reefs, swim with colorful marine life, and experience the awe of seeing majestic blue whales. Perfect for adventurers and nature lovers, we promise an unforgettable ocean experience.</p>
                 <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Satisfaction Gurantee</p>
                 <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Complete Equipment</p>
-                <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Best Rider & Diver</p>
+                <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Experienced Skipper & Divers</p>
                 <div class="bg-primary d-flex align-items-center p-4 mt-5">
                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
                         <i class="fa fa-phone-alt fa-2x text-primary"></i>
