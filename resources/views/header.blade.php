@@ -129,11 +129,11 @@
         </div>
         <div class="col-lg-4 text-center text-lg-end">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/mirissabaydiving"><i
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/mirissabaydiving" target="_blank"><i
                         class="fab fa-facebook-f fw-normal"></i></a>
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/srilankabluewhalesnorkeling?igsh=MWl1OHl2YzdjaDhmYg==" target="_blank"><i
                         class="fab fa-instagram fw-normal"></i></a>
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.google.com/maps?ll=5.944071,80.460657&z=16&t=m&hl=en&gl=LK&mapclient=embed&cid=5718689178518660128" target="_blank"><i
                         class="fab fa-youtube fw-normal"></i></a>
             </div>
         </div>

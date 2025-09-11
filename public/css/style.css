@@ -994,6 +994,49 @@ h6,
     font-weight: 500;
 }
 
+.tripadvisor-logo {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #00af87; /* Tripadvisor green */
+}
+
+.owl {
+  display: flex;
+  gap: 5px;
+  margin-right: 8px;
+}
+
+.eye {
+  width: 24px;
+  height: 24px;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye.left {
+  background: #34e0a1; /* green */
+}
+
+.eye.right {
+  background: #f15c4f; /* red */
+}
+
+.pupil {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 .review-stars {
     margin-bottom: 12px;
 }
