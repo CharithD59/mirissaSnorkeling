@@ -169,7 +169,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
         <div class="logo">
             <a href="/">
-                <img src="{{ asset (env('ASSET_PREFIX', '').'img/logoN.png')}}" alt="Logo"> 
+                <img src="{{ asset (env('ASSET_PREFIX', '').'img/logoP.png')}}" alt="Logo"> 
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
