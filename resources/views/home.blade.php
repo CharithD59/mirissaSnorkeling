@@ -6,7 +6,7 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <video class="w-100" autoplay muted loop playsinline>
-                <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-1.MP4')}}" type="video/mp4"> 
+                <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-1.mp4')}}" type="video/mp4"> 
                 Your browser does not support the video tag.
             </video>
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
