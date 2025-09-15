@@ -21,3 +21,4 @@ Route::get('view_booking_page', 'App\Http\Controllers\PageController@view_bookin
 Route::get('send_contact_mail', 'App\Http\Controllers\PageController@send_contact_mail');
 Route::get('send_booking_mail', 'App\Http\Controllers\PageController@send_booking_mail');
 Route::POST('/log-whatsapp-click', 'App\Http\Controllers\PageController@logWhatsappClick');
+Route::get('view_gallery_section', 'App\Http\Controllers\PageController@view_gallery_section');
