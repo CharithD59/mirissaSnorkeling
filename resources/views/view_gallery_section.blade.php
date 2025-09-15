@@ -296,7 +296,7 @@
             <!-- Turtle Snorkeling -->
             <div class="gallery-item" data-category="turtle_snorkeling">
                 <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/TurtleSnorkeling_02.JPG')}}" alt="Turtle Snorkeling">
+                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/TurtleSnorkeling_02.jpg')}}" alt="Turtle Snorkeling">
                 </div>
             </div>
             
