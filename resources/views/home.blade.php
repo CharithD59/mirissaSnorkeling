@@ -421,7 +421,7 @@
                 </h2>
             </div>
             <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="">Explore More Images</a>
+                <a class="btn btn-primary py-3 px-5" href="view_gallery_section">Explore More Images</a>
             </div>
         </div>
         <div class="row g-4">

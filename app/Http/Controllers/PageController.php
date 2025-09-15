@@ -102,4 +102,10 @@ class PageController extends Controller{
 
     }
 
+    public function view_gallery_section(){
+
+        return view('view_gallery_section');
+
+    }
+
 }
