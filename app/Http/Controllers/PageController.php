@@ -108,4 +108,10 @@ class PageController extends Controller{
 
     }
 
+    public function view_blue_whale_snorkeling(){
+
+        return view('view_blue_whale_snorkeling');
+
+    }
+
 }
