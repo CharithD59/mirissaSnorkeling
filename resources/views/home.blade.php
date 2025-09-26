@@ -199,6 +199,21 @@
 </div>
 <!-- About End -->
 
+<style>
+    .price-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #0d6efd;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 10;
+        }
+</style>
+
 <!-- Services Start -->
  <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s" id="services_section">
     <div class="container">
@@ -212,6 +227,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
+                            <span class="price-tag">$40</span>
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-4.png')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -226,6 +242,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
+                            <span class="price-tag">From $150</span>
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-14.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -237,12 +254,14 @@
                             <div class="d-flex justify-content-between mb-3"><span>3 to 5 Hrs</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span>Gopro Camera</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Tirtule, Dolphin Watching</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-4"><span>Tirtule, Dolphin Watching</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <a href="view_blue_whale_snorkeling" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Read More</a>
                         </div>
                     </div>
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
+                            <span class="price-tag">$120</span>
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-15.png')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -259,6 +278,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
+                            <span class="price-tag">$20</span>
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-7.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -271,24 +291,9 @@
                         </div>
                     </div>
 
-                    <!-- <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-8.jpg')}}" alt="Snorkeling">
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Diving</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Pickup All Day</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Gopro Camera</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>3 Hrs</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Fruit</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
-                        </div>
-                    </div> -->
-
                     <div class="price-item pb-4">
                         <div class="position-relative">
+                            <span class="price-tag">$120</span>
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-9.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -306,6 +311,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
+                            <span class="price-tag">$75</span>
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-10.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -319,22 +325,6 @@
                             <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
                         </div>
                     </div>
-
-                    <!-- <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-11.jpg')}}" alt="Snorkeling">
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Surf Lesson</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Starting 8am 2pm and Drop</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Takes around 1.5 to 2 hours</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Choose 3 Beaches</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Surfboard & Guide</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
-                        </div>
-                    </div> -->
 
                 </div>
             </div>
