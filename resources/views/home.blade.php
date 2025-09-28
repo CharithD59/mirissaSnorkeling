@@ -131,6 +131,10 @@
                     <a href="view_booking_page" class="cta-button">
                         Join a Whale Watching Tour 🐋
                     </a>
+                    <br>
+                    <a href="view_blue_whale_snorkeling" class="cta-button">
+                        Read More 🐋
+                    </a>
                 </div>
             </div>
         </div>
