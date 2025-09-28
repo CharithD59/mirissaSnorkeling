@@ -23,6 +23,9 @@
     .page-header_about {
         height: 300px;
     }
+    .page-header_about h1 {
+        text-align: center;
+    }
 }
 </style>
 
@@ -420,19 +423,107 @@
     });
 </script>
 
+<!-- Whale Snorkeling Tours - Modern HTML + CSS paragraphs -->
+<section class="tours-section" aria-labelledby="tours-heading">
+  <div class="container">
+    <h2 id="tours-heading">Whale & Snorkeling Tours — Choose Your Experience</h2>
+    <p class="lead">Safe, professional and unforgettable — all tours include a licensed skipper, lifeguard, breakfast, snorkeling gear, GoPro photos and free turtle snorkeling.</p>
+
+    <p class="tour-option"><strong>Team Boat Tour:</strong> A perfect choice for families, couples or small groups seeking an exclusive and personalized adventure. Enjoy the whole boat just for your team (maximum 4 people). For <span class="price">$500 per boat</span>, you’ll receive breakfast, all snorkeling equipment, free turtle snorkeling tour, GoPro camera, and free pick-up and drop-off within Mirissa. Guided by a professional licensed skipper and lifeguard.</p>
+
+    <p class="tour-option"><strong>Private Boat Tour:</strong> Experience the ocean without distractions on your own private boat. This package includes breakfast, snorkeling equipment, sightings of whales and dolphins, a free turtle snorkeling tour, GoPro camera, and free pick-up and drop-off within Mirissa. Led by a licensed skipper and lifeguard for your safety and comfort.</p>
+
+    <p class="tour-option"><strong>One Person Tour:</strong> Ideal for solo travelers or budget-conscious guests who wish to join a small group of whale lovers. For <span class="price">$300 per person</span>, enjoy breakfast, snorkeling equipment, free turtle snorkeling tour, GoPro camera, and pick-up and drop-off within Mirissa. With a professional licensed skipper and lifeguard accompanying you.</p>
+
+    <p class="tour-option"><strong>Two Person Tour:</strong> A wonderful choice for couples looking for a private and romantic experience. For <span class="price">$350 per two people</span>, enjoy whale, dolphin, and turtle encounters along with breakfast, snorkeling gear, lifejackets, GoPro camera, and pick-up and drop-off within Mirissa. Supervised by a licensed skipper and lifeguard.</p>
+
+    <p class="footnote">All tours depend on weather and nature’s rhythm. Safety is our first priority — your experience will always be guided by professionals.</p>
+  </div>
+
+  <style>
+    .tours-section{background:linear-gradient(180deg,#f7fbff,#eef8ff);padding:48px 20px;}
+    .tours-section .container{max-width:1300px;margin:0 auto;}
+    .tours-section h2{font-size:1.8rem;margin-bottom:12px;}
+    .tours-section .lead{color:#6b7280;margin-bottom:22px;}
+    .tour-option{margin-bottom:20px;line-height:1.6;color:#334155;}
+    .tour-option strong{color:#111827;}
+    .price{color:#0d6efd;font-weight:600;}
+    .footnote{color:#6b7280;font-size:0.9rem;margin-top:24px;}
+    @media(max-width:600px){
+      .tours-section{padding:28px 14px;}
+      .tours-section h2{font-size:1.4rem;}
+    }
+  </style>
+</section>
+
+<!-- Modern Video Section -->
+<section class="video-gallery" aria-labelledby="video-heading">
+  <div class="container">
+    <h2 id="video-heading">Experience the Adventure</h2>
+    <p class="lead">Watch highlights from our recent whale snorkeling tours in Mirissa.</p>
+
+    <div class="video-grid">
+      <div class="video-item">
+        <video autoplay muted loop playsinline>
+          <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-1.mp4')}}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-item">
+        <video autoplay muted loop playsinline>
+          <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-2.mp4')}}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-item">
+        <video autoplay muted loop playsinline>
+          <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-3.mp4')}}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-item">
+        <video autoplay muted loop playsinline>
+          <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-4.mp4')}}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .video-gallery{background:#f9fafb;padding:48px 20px;}
+    .video-gallery .container{max-width:1300px;margin:0 auto;}
+    .video-gallery h2{font-size:1.8rem;margin-bottom:12px;}
+    .video-gallery .lead{color:#6b7280;margin-bottom:22px;}
+
+    .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+    .video-item{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,0.12);}
+    .video-item video{width:100%;height:auto;display:block;border-radius:16px;object-fit:cover;}
+
+    /* Vertical video aspect ratio */
+    .video-item{aspect-ratio:9/16;background:#000;}
+    .video-item video{height:100%;width:100%;object-fit:cover;}
+
+    @media(max-width:600px){
+      .video-gallery{padding:28px 14px;}
+      .video-gallery h2{font-size:1.4rem;}
+    }
+  </style>
+</section>
+
+
 <style>
 
-    .contact_sec {
+    .faq_sec {
         background: linear-gradient(135deg, #e0f7ff 0%, #b3e0ff 100%);
         min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 40px 20px;
-        box-sizing: border-box;
     }
 
-    .contact_sec .container {
+    .faq_sec .container {
         max-width: 1100px;
         width: 100%;
         background: white;
@@ -441,275 +532,172 @@
         overflow: hidden;
     }
 
-    .contact_sec .contact-header {
+    .faq_sec .faq-header {
         background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
         color: white;
-        padding: 50px 30px;
+        padding: 40px 30px;
         text-align: center;
-        position: relative;
-        overflow: hidden;
     }
 
-    .contact_sec .contact-header:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".1" fill="%23ffffff"/></svg>');
-        background-size: cover;
-        opacity: 0.1;
-    }
-
-    .contact_sec .contact-title {
-        font-size: 2.8rem;
+    .faq_sec .faq-title {
+        font-size: 2.5rem;
         font-weight: 800;
-        margin-bottom: 15px;
-        position: relative;
+        margin-bottom: 10px;
+        color: #ffffff;
     }
 
-    .contact_sec .contact-subtitle {
+    .faq_sec .faq-subtitle {
         font-size: 1.2rem;
         opacity: 0.9;
         max-width: 600px;
         margin: 0 auto;
         line-height: 1.6;
-        position: relative;
     }
 
-    .contact_sec .contact-content {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
+    .faq_sec .faq-content {
+        padding: 40px 30px;
     }
 
-    .contact_sec .contact-info {
-        flex: 1;
-        min-width: 300px;
-        padding: 50px 40px;
-        background: #f8fafc;
-    }
-
-    .contact_sec .contact-methods {
-        margin-bottom: 40px;
-    }
-
-    .contact_sec .contact-method {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 30px;
-        padding: 20px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .contact_sec .contact-method:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .contact_sec .contact-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 20px;
-        font-size: 24px;
-        color: white;
-        flex-shrink: 0;
-    }
-
-    .contact_sec .phone .contact-icon {
-        background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-    }
-
-    .contact_sec .email .contact-icon {
-        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-    }
-
-    .contact_sec .contact-details h3 {
-        font-size: 1.3rem;
-        color: #2c3e50;
-        margin-bottom: 5px;
-    }
-
-    .contact_sec .contact-details p {
-        color: #5a6c7d;
-        font-size: 1.1rem;
-        margin-bottom: 5px;
-    }
-
-    .contact_sec .contact-link {
-        color: #3498db;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-        display: inline-block;
-        margin-top: 5px;
-    }
-
-    .contact_sec .contact-link:hover {
-        color: #2980b9;
-        text-decoration: underline;
-    }
-
-    .contact_sec .business-hours {
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .contact_sec .hours-title {
-        font-size: 1.4rem;
-        color: #2c3e50;
+    .faq_sec .faq-item {
         margin-bottom: 20px;
-        display: flex;
-        align-items: center;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border: 1px solid #eaeaea;
     }
 
-    .contact_sec .hours-title i {
-        margin-right: 10px;
-        color: #3498db;
+    .faq_sec .faq-item.active {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-color: #3498db;
     }
 
-    .contact_sec .hours-list {
-        list-style: none;
-    }
-
-    .contact_sec .hours-list li {
+    .faq_sec .faq-question {
+        padding: 20px 25px;
+        background: #f8fafc;
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
-        padding: 10px 0;
-        border-bottom: 1px solid #f0f0f0;
+        align-items: center;
+        transition: background 0.3s ease;
+    }
+
+    .faq_sec .faq-question:hover {
+        background: #f0f5ff;
+    }
+
+    .faq_sec .faq-item.active .faq-question {
+        background: linear-gradient(135deg, #f0f8ff 0%, #e1f0ff 100%);
+        border-bottom: 1px solid #e1f0ff;
+    }
+
+    .faq_sec .faq-question h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0;
+    }
+
+    .faq_sec .faq-icon {
+        color: #3498db;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+
+    .faq_sec .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+        color: #2c3e50;
+    }
+
+    .faq_sec .faq-answer {
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        background: white;
+    }
+
+    .faq_sec .faq-item.active .faq-answer {
+        padding: 25px;
+        max-height: 500px;
+    }
+
+    .faq_sec .faq-answer p {
         color: #5a6c7d;
+        line-height: 1.7;
+        font-size: 1.05rem;
+        margin: 0;
     }
 
-    .contact_sec .hours-list li:last-child {
-        border-bottom: none;
-    }
-
-    .contact_sec .hours-list .day {
-        font-weight: 600;
-        color: #2c3e50;
-    }
-
-    .contact_sec .contact-form {
-        flex: 1;
-        min-width: 300px;
-        padding: 50px 40px;
-    }
-
-    .contact_sec .form-title {
-        font-size: 1.8rem;
-        color: #2c3e50;
-        margin-bottom: 30px;
+    .faq_sec .contact-section {
+        background: #f8fafc;
+        padding: 30px;
         text-align: center;
+        border-top: 1px solid #eaeaea;
     }
 
-    .contact_sec .form-group {
-        margin-bottom: 25px;
-    }
-
-    .contact_sec .form-group label {
-        display: block;
-        margin-bottom: 8px;
+    .faq_sec .contact-title {
+        font-size: 1.5rem;
         color: #2c3e50;
-        font-weight: 600;
+        margin-bottom: 15px;
     }
 
-    .contact_sec .form-control {
-        width: 100%;
-        padding: 15px;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        font-size: 1rem;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    .faq_sec .contact-text {
+        color: #5a6c7d;
+        margin-bottom: 20px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .contact_sec .form-control:focus {
-        outline: none;
-        border-color: #3498db;
-        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-    }
-
-    .contact_sec textarea.form-control {
-        min-height: 150px;
-        resize: vertical;
-    }
-
-    .contact_sec .submit-btn {
-        display: block;
-        width: 100%;
+    .faq_sec .contact-btn {
+        display: inline-block;
         background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
         color: white;
-        border: none;
-        padding: 16px;
-        border-radius: 8px;
-        font-size: 1.1rem;
+        padding: 12px 30px;
+        border-radius: 50px;
+        text-decoration: none;
         font-weight: 600;
-        cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
     }
 
-    .contact_sec .submit-btn:hover {
+    .faq_sec .contact-btn:hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 20px rgba(52, 152, 219, 0.5);
     }
 
-    .contact_sec .submit-btn:active {
-        transform: translateY(1px);
-    }
-
-    .contact_sec .social-links {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-    }
-
-    .contact_sec .social-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #f0f0f0;
-        color: #5a6c7d;
-        margin: 0 10px;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
-    }
-
-    .contact_sec .social-link:hover {
-        transform: translateY(-5px);
-        background: #3498db;
-        color: white;
-        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    .faq_sec .contact-btn i {
+        margin-right: 8px;
     }
 
     @media (max-width: 768px) {
-        .contact_sec .contact-content {
-            flex-direction: column;
+        .faq_sec .faq-header {
+            padding: 30px 20px;
         }
         
-        .contact_sec .contact-info, .contact-form {
-            padding: 30px 25px;
+        .faq_sec .faq-title {
+            font-size: 2rem;
         }
         
-        .contact_sec .contact-title {
-            font-size: 2.2rem;
+        .faq_sec .faq-content {
+            padding: 30px 20px;
+        }
+        
+        .faq_sec .faq-question {
+            padding: 18px 20px;
+        }
+        
+        .faq_sec .faq-question h3 {
+            font-size: 1.1rem;
+        }
+        
+        .faq_sec .faq-item.active .faq-answer {
+            padding: 20px;
         }
     }
 
-    .contact_sec .wave-decoration {
+    .faq_sec .wave-decoration {
         height: 10px;
         background: linear-gradient(90deg, 
             #3498db, #2ecc71, #9b59b6, #e74c3c, #f39c12, #3498db);
@@ -723,136 +711,154 @@
     }
 </style>
 
-<!-- Contact Section -->
-
-<section class="contact_sec">
+<section class="faq_sec">
     <div class="container">
         <div class="wave-decoration"></div>
         
-        <div class="contact-header">
-            <h1 class="contact-title">Contact Us</h1>
-            <p class="contact-subtitle">Get in touch with us to book your adventure or ask any questions about our boat tours</p>
+        <div class="faq-header">
+            <h1 class="faq-title">FAQ's</h1>
+            <p class="faq-subtitle">Frequently Asked Questions about our boat tours</p>
         </div>
         
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-methods">
-                    <div class="contact-method phone">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Call Us</h3>
-                            <p>+94 70 205 0138</p>
-                            <a href="tel:+94702050138" class="contact-link">Call Now</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-method email">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email Us</h3>
-                            <p>mirissabaydiving@gmail.com</p>
-                            <a href="mailto:mirissabaydiving@gmail.com" class="contact-link">Send Email</a>
-                        </div>
-                    </div>
+        <div class="faq-content">
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <h3>How many people can join the private boat tour?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                 </div>
-                
-                <div class="business-hours">
-                    <h3 class="hours-title"><i class="fas fa-clock"></i> Business Hours</h3>
-                    <ul class="hours-list">
-                        <li><span class="day">Monday - Friday</span> <span>8:00 AM - 6:00 PM</span></li>
-                        <li><span class="day">Saturday</span> <span>8:00 AM - 8:00 PM</span></li>
-                        <li><span class="day">Sunday</span> <span>8:00 AM - 5:00 PM</span></li>
-                        <li><span class="day">Holidays</span> <span>9:00 AM - 4:00 PM</span></li>
-                    </ul>
-                </div>
-                
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-tripadvisor"></i></a>
+                <div class="faq-answer">
+                    <p>Our private boat tours are customizable to accommodate your group size. We can accommodate up to 6 people comfortably on our standard private tours. For larger groups, we offer special arrangements with larger vessels. Please contact us for groups larger than 6 people.</p>
                 </div>
             </div>
             
-            <div class="contact-form">
-                <h3 class="form-title">Send us a Message</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="tour">Tour Interest</label>
-                        <select id="tour" class="form-control">
-                            <option value="">Select a tour</option>
-                            <option value="group">Group Boat Tour</option>
-                            <option value="private-single">Private Tour (Single)</option>
-                            <option value="private-couple">Private Tour (Couple)</option>
-                            <option value="other">Other/Not Sure</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" class="form-control" placeholder="Tell us about your inquiry or booking request" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What's included in the tour package?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>All our tour packages include: 4-hour whale snorkeling experience, breakfast, premium snorkeling equipment, free snorkeling with turtle tour, GoPro camera for capturing memories, free hotel pick-up and drop-off, and an experienced marine guide. Private tours also include exclusive use of the boat.</p>
+                </div>
             </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do we get to use the GoPro camera ourselves?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We provide a GoPro camera for each group to use throughout the tour. Our guides will help you set it up and show you how to use it effectively. You'll be able to capture your own underwater memories, and we'll provide a memory card for you to keep all your photos and videos.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can we customize the tour schedule?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! While our standard tours are 4 hours, private tours can be customized to fit your schedule. We can adjust the duration, departure time, and even the itinerary based on your preferences. Additional hours can be added for an extra fee. Please discuss your requirements when booking.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is the tour suitable for beginners?</h3>
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, our tours are perfect for beginners! Our experienced guides provide thorough safety briefings and snorkeling instruction before we enter the water. We have flotation devices available and always stay in calm, protected areas ideal for first-time snorkelers. Over 60% of our guests are first-time snorkelers!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h3 class="contact-title">Still have questions?</h3>
+            <p class="contact-text">If you didn't find the answer to your question, feel free to contact us directly. Our team is happy to help!</p>
+            <a href="#" id="whatsappBtn" class="contact-btn">
+                <img src="{{ asset (env('ASSET_PREFIX', '').'img/whatsapp_s_size.png')}}" 
+                    alt="WhatsApp" 
+                    style="height:20px; width:20px; margin-right:8px; vertical-align:middle;">
+                Chat on WhatsApp
+            </a>
         </div>
     </div>
 </section>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const contactForm = document.getElementById('contactForm');
+        const faqItems = document.querySelectorAll('.faq-item');
         
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Initially expand the first item
+        faqItems[0].classList.add('active');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
             
-            // Simple form validation
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            if (name && email && message) {
-                // In a real application, you would send the form data to a server
-                alert('Thank you for your message! We will get back to you soon.');
-                contactForm.reset();
-            } else {
-                alert('Please fill in all required fields.');
-            }
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
         });
         
-        // Add animation to contact methods
-        const contactMethods = document.querySelectorAll('.contact-method');
-        contactMethods.forEach((method, index) => {
-            method.style.opacity = '0';
-            method.style.transform = 'translateX(-20px)';
+        // Add animation to FAQ items on page load
+        faqItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
             
             setTimeout(() => {
-                method.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                method.style.opacity = '1';
-                method.style.transform = 'translateX(0)';
-            }, 300 * index);
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, 200 * index);
         });
     });
 </script>
+
+<script>
+document.getElementById("whatsappBtn").addEventListener("click", function (e) {
+    e.preventDefault(); // Stop normal link
+
+    fetch('/log-whatsapp-click', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        },
+        body: JSON.stringify({
+            action: 'whatsapp_click',
+            phone: '94702050138'
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Open WhatsApp after logging
+        window.open("https://wa.me/94702050138", "_blank");
+    })
+    .catch(error => {
+        console.error("Logging failed", error);
+        window.open("https://wa.me/94702050138", "_blank");
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 @include('footer')
