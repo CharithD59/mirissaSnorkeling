@@ -483,7 +483,7 @@
       </div>
       <div class="video-item">
         <video autoplay muted loop playsinline>
-          <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-4.mp4')}}" type="video/mp4">
+          <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-5.mp4')}}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
