@@ -1583,3 +1583,288 @@ h6,
         text-align: center;
     }
 }
+
+.banner_01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px;
+}
+
+.banner_01 .banner-container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.banner_01 .banner-container:hover {
+    transform: translateY(-5px);
+}
+
+.banner_01 .banner {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    background: linear-gradient(to right, #0f3460, #1a508b);
+    overflow: hidden;
+}
+
+.banner_01 .ocean {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to bottom, #1a508b, #0a2a4a);
+    z-index: 1;
+}
+
+.banner_01 .wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%230a2a4a"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%230a2a4a"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%230a2a4a"/></svg>');
+    background-size: 1200px 100px;
+    animation: wave 12s linear infinite;
+}
+
+.banner_01 .wave:nth-child(2) {
+    opacity: 0.5;
+    animation: wave 10s linear infinite reverse;
+    bottom: 10px;
+}
+
+.banner_01 .whale {
+    position: absolute;
+    width: 180px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50% 40% 40% 50%;
+    bottom: 120px;
+    left: -200px;
+    z-index: 2;
+    animation: swim 20s linear infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.banner_01 .whale:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    top: 15px;
+    right: -10px;
+}
+
+.banner_01 .whale:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: #0a2a4a;
+    border-radius: 50%;
+    top: 25px;
+    right: 15px;
+}
+
+.banner_01 .tail {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50% 0 0 50%;
+    bottom: 130px;
+    left: -240px;
+    z-index: 2;
+    animation: swim 20s linear infinite;
+    transform: rotate(30deg);
+}
+
+.banner_01 .water-spout {
+    position: absolute;
+    width: 15px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50% 50% 0 0;
+    bottom: 200px;
+    left: -100px;
+    z-index: 2;
+    animation: spout 20s linear infinite;
+}
+
+.banner_01 .water-spout:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    top: -10px;
+    left: -5px;
+}
+
+.banner_01 .bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.banner_01 .bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    bottom: -50px;
+    animation: bubble-rise linear infinite;
+}
+
+.banner_01 .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 4;
+    color: white;
+}
+
+.banner_01 .title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.banner_01 .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-out;
+}
+
+.banner_01 .cta-button {
+    padding: 12px 30px;
+    background: #ff9a3c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.banner_01 .cta-button:hover {
+    background: #ff7b00;
+    transform: scale(1.05);
+}
+
+.banner_01 .location {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 15px;
+    border-radius: 20px;
+    z-index: 4;
+}
+
+@keyframes wave {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1200px;
+    }
+}
+
+@keyframes swim {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes spout {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+@keyframes bubble-rise {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-400px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 154, 60, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 154, 60, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 154, 60, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner_01 .title {
+        font-size: 2.5rem;
+    }
+    .banner_01 .subtitle {
+        font-size: 1.2rem;
+    }
+    .banner_01 .banner {
+        height: 400px;
+    }
+}

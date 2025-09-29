@@ -218,6 +218,56 @@
         }
 </style>
 
+<section class="banner_01">
+    <div class="banner-container" onclick="window.location.href='whale-snorkeling-page.html'">
+        <div class="banner">
+            <div class="ocean">
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+            <div class="whale"></div>
+            <div class="tail"></div>
+            <div class="water-spout"></div>
+            <div class="bubbles" id="bubbles"></div>
+            <div class="content">
+                <h1 class="title">BLUE WHALE SNORKELING</h1>
+                <p class="subtitle">Dive into an unforgettable adventure in Mirissa and snorkel alongside majestic whales
+                    and playful dolphins in the crystal-clear waters of the Indian Ocean.</p>
+                <button class="cta-button">READ MORE</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create bubbles dynamically
+        const bubblesContainer = document.getElementById('bubbles');
+        
+        for (let i = 0; i < 20; i++) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            
+            // Random properties for each bubble
+            const size = Math.random() * 20 + 5;
+            const left = Math.random() * 100;
+            const animationDuration = Math.random() * 10 + 5;
+            const animationDelay = Math.random() * 15;
+            
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${left}%`;
+            bubble.style.animationDuration = `${animationDuration}s`;
+            bubble.style.animationDelay = `${animationDelay}s`;
+            
+            bubblesContainer.appendChild(bubble);
+        }
+
+        // Redirect when banner is clicked
+        document.querySelector('.banner-container').addEventListener('click', function() {
+            window.location.href = 'whale-snorkeling-page.html';
+        });
+    </script>
+</section>
+
 <!-- Services Start -->
  <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s" id="services_section">
     <div class="container">
