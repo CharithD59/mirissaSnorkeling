@@ -248,6 +248,12 @@ h6,
     height: 3rem;
 }
 
+.carousel-item video {
+    width: 100%;
+    height: 100vh; /* full screen height */
+    object-fit: cover; /* zoom + crop to fit */
+    object-position: center; /* center focus */
+}
 
 /*** Section Title ***/
 .section-title::before {
