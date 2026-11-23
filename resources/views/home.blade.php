@@ -194,7 +194,7 @@
             </div>
             <div class="col-lg-6 pt-2" style="min-height: 500px;">
                 <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                    <img class="position-absolute img-fluid w-100 h-100" src="{{ asset (env('ASSET_PREFIX', '').'img/about-4.jpg')}}" style="object-fit: cover; padding: 0 0 50px 100px;" alt="Snorkeling">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{{ asset (env('ASSET_PREFIX', '').'img/about-5.png')}}" style="object-fit: cover; padding: 0 0 50px 100px;" alt="Snorkeling">
                     <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="{{ asset (env('ASSET_PREFIX', '').'img/about-2.jpg')}}" style="object-fit: cover;" alt="Snorkeling">
                 </div>
             </div>
@@ -281,7 +281,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <span class="price-tag">$40</span>
+                            <!-- <span class="price-tag">$40</span> -->
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-4.png')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -296,7 +296,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <span class="price-tag">From $150</span>
+                            <!-- <span class="price-tag">From $150</span> -->
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-14.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -315,7 +315,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <span class="price-tag">$120</span>
+                            <!-- <span class="price-tag">$120</span> -->
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-15.png')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -347,7 +347,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <span class="price-tag">$120</span>
+                            <!-- <span class="price-tag">$120</span> -->
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-9.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
@@ -365,7 +365,7 @@
 
                     <div class="price-item pb-4">
                         <div class="position-relative">
-                            <span class="price-tag">$75</span>
+                            <!-- <span class="price-tag">$75</span> -->
                             <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-10.jpg')}}" alt="Snorkeling">
                         </div>
                         <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
