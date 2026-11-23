@@ -274,82 +274,25 @@
 <section class="gallery-section">
     <div class="container">
         <header>
-            <h1>Mirissa Snorkeling Gallery</h1>
-            <p>Explore the breathtaking underwater world of Mirissa through our collection of stunning snorkeling moments</p>
+            <h1>{{ setting('gallery.page_title') }}</h1>
+            <p>{{ setting('gallery.page_intro') }}</p>
         </header>
         
         <div class="gallery-controls">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="turtle_snorkeling">Turtle Snorkeling</button>
-            <button class="filter-btn" data-filter="whales _snorkeling">Whales Snorkeling</button>
-            <button class="filter-btn" data-filter="branding">Branding</button>
+            @foreach($images->filter(function ($i) { return $i->category; })->unique('category_slug') as $cat)
+                <button class="filter-btn" data-filter="{{ $cat->category_slug }}">{{ $cat->category }}</button>
+            @endforeach
         </div>
         
         <div class="gallery-grid">
-            <!-- Turtle Snorkeling -->
-            <div class="gallery-item" data-category="turtle_snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/TurtleSnorkeling_01.JPG')}}" alt="Turtle Snorkeling">
+            @foreach($images as $image)
+                <div class="gallery-item" data-category="{{ $image->category_slug }}">
+                    <div class="water-effect">
+                        <img src="{{ site_asset($image->image) }}" alt="{{ $image->alt ?: $image->title }}" loading="lazy">
+                    </div>
                 </div>
-            </div>
-
-            <!-- Turtle Snorkeling -->
-            <div class="gallery-item" data-category="turtle_snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/TurtleSnorkeling_02.jpg')}}" alt="Turtle Snorkeling">
-                </div>
-            </div>
-            
-            <!-- Whales  Snorkeling -->
-            <div class="gallery-item" data-category="whales _snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/WhalesSnorkeling_01.JPG')}}" alt="whales _snorkeling reef in Mirissa">
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="whales _snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/WhalesSnorkeling_02.JPG')}}" alt="whales _snorkeling reef in Mirissa">
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="whales _snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/WhalesSnorkeling_03.JPG')}}" alt="whales _snorkeling reef in Mirissa">
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="whales _snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/WhalesSnorkeling_04.JPG')}}" alt="whales _snorkeling reef in Mirissa">
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="whales _snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/WhalesSnorkeling_05.JPG')}}" alt="whales _snorkeling reef in Mirissa">
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="whales _snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/WhalesSnorkeling_06.JPG')}}" alt="whales _snorkeling reef in Mirissa">
-                </div>
-            </div>
-
-            <div class="gallery-item" data-category="whales _snorkeling">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/WhalesSnorkeling_07.JPG')}}" alt="whales _snorkeling reef in Mirissa">
-                </div>
-            </div>
-            
-            <!-- branding -->
-            <div class="gallery-item" data-category="branding">
-                <div class="water-effect">
-                    <img src="{{ asset (env('ASSET_PREFIX', '').'img/gallery/Branding.png')}}" alt="branding">
-                </div>
-            </div>
-            
+            @endforeach
         </div>
     </div>
 

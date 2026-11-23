@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'username', 'email', 'password', 'role', 'is_active', 'last_login_at',
     ];
 
     /**
@@ -36,5 +36,18 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'last_login_at'     => 'datetime',
+        'is_active'         => 'boolean',
     ];
+
+    public function getInitialsAttribute()
+    {
+        $source = $this->name ?: $this->username;
+        $parts = preg_split('/\s+/', trim((string) $source));
+        $initials = '';
+        foreach (array_slice($parts, 0, 2) as $part) {
+            $initials .= strtoupper(substr($part, 0, 1));
+        }
+        return $initials ?: 'A';
+    }
 }
