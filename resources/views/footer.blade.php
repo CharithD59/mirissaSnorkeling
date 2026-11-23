@@ -4,23 +4,23 @@
     <div class="container py-2">
         <div class="row g-5">
             <div class="col-lg-4 col-md-6">
-                <h2 class="display-6 fw-bold text-primary mb-4">Mirissa<span class="text-white">BayDiving</span></h2>
-                <p>Discover the wonders of Mirissa Bay with our exceptional diving, snorkeling, and blue whale tours. Explore vibrant coral reefs and witness majestic marine life for an unforgettable adventure</p>
+                <h2 class="display-6 fw-bold text-primary mb-4">{{ setting('footer.brand_first') }}<span class="text-white">{{ setting('footer.brand_second') }}</span></h2>
+                <p>{{ setting('footer.about') }}</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-square me-1" href="https://www.facebook.com/mirissabaydiving" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square me-1" href="https://www.instagram.com/srilankabluewhalesnorkeling?igsh=MWl1OHl2YzdjaDhmYg==" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-square me-1" href="https://www.google.com/maps?ll=5.944071,80.460657&z=16&t=m&hl=en&gl=LK&mapclient=embed&cid=5718689178518660128" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                    <a class="btn btn-square me-1" href="{{ setting('social.facebook') }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square me-1" href="{{ setting('social.instagram') }}" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-square me-1" href="{{ setting('social.google_maps') }}" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
 
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-light mb-4">Get In Touch</h5>
-                <p><i class="fa fa-map-marker-alt me-3"></i>R. Situm, 214, A2, Mirissa</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+94 70 205 0138</p>
+                <p><i class="fa fa-map-marker-alt me-3"></i>{{ setting('contact.address_short') }}</p>
+                <p><i class="fa fa-phone-alt me-3"></i>{{ setting('contact.phone') }}</p>
                 <p>
                     <i class="fa fa-envelope me-3"></i>
-                    <a href="mailto:info@mirissabaybluewhalesnorkelingtour.com" title="mirissabaydiving@gmail.com">
-                        mirissabaydiving@gmail.com
+                    <a href="mailto:{{ setting('contact.email') }}" title="{{ setting('contact.email') }}">
+                        {{ setting('contact.email') }}
                     </a>
                 </p>
             </div>
@@ -36,8 +36,8 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-primary mb-4">Business Hours</h4>
                 <p>We are open every day to serve you better. Visit us during the hours below:</p>
-                <p class="mb-1">Monday - Sunday</p>
-                <h6 class="text-light">06:00 am - 10:00 pm</h6>
+                <p class="mb-1">{{ setting('footer.hours_days') }}</p>
+                <h6 class="text-light">{{ setting('footer.hours_time') }}</h6>
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="#">mirissabaydiving</a>, All Right Reserved.
+                    &copy; <a href="#">{{ setting('footer.copyright') }}</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -61,7 +61,7 @@
 <a href="#" class="btn btn-lg btn-primary btn-lg-square-top back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/94702050138"
+<a href="https://wa.me/{{ setting('contact.whatsapp') }}"
    id="whatsappFloatBtn"
    class="whatsapp-float"
    target="_blank"
@@ -97,7 +97,7 @@ document.getElementById("whatsappFloatBtn").addEventListener("click", function (
         },
         body: JSON.stringify({
             action: 'whatsapp_floating_click',
-            phone: '94702050138'
+            phone: @json(setting('contact.whatsapp'))
         }),
         keepalive: true   // Important for mobile browsers
     }).catch(() => {

@@ -1,51 +1,30 @@
 @include('header')
 
 <!-- Carousel Start -->
-
+@if(setting_on('home.show_hero'))
 <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <video class="w-100" autoplay muted loop playsinline>
-                <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-1.mp4')}}" type="video/mp4"> 
-                Your browser does not support the video tag.
-            </video>
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Let's Ride A Wave</h5>
-                    <h2 class="display-1 text-white mb-md-4 animated zoomIn">Take Your Dive To The Next Level</h2>
-                    <a href="view_booking_page" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book Now</a>
-                    <a href="/#contact_section" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
+        @foreach([1, 2, 3] as $slide)
+            @php $media = setting('hero.' . $slide . '.media'); @endphp
+            <div class="carousel-item {{ $slide === 1 ? 'active' : '' }}">
+                @if(is_video_path($media))
+                    <video class="w-100" autoplay muted loop playsinline>
+                        <source src="{{ site_asset($media) }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                @else
+                    <img class="w-100" src="{{ site_asset($media) }}" alt="{{ setting('hero.' . $slide . '.title') }}">
+                @endif
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{ setting('hero.' . $slide . '.subtitle') }}</h5>
+                        <h2 class="{{ $slide === 2 ? 'display-2' : 'display-1' }} text-white mb-md-4 animated zoomIn">{{ setting('hero.' . $slide . '.title') }}</h2>
+                        <a href="view_booking_page" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{{ setting('hero.btn_book') }}</a>
+                        <a href="/#contact_section" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">{{ setting('hero.btn_contact') }}</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <video class="w-100" autoplay muted loop playsinline>
-                <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-2.mp4')}}" type="video/mp4"> 
-                Your browser does not support the video tag.
-            </video>
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Blue Whale Tours</h5>
-                    <h2 class="display-2 text-white mb-md-4 animated zoomIn">Mirissa Bay Diving Snorkeling and Blue Whale Tour</h2>
-                    <a href="view_booking_page" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book Now</a>
-                    <a href="/#contact_section" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <video class="w-100" autoplay muted loop playsinline>
-                <source src="{{ asset (env('ASSET_PREFIX', '').'img/carousel-3.mp4')}}" type="video/mp4"> 
-                Your browser does not support the video tag.
-            </video>
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 900px;">
-                    <h5 class="text-white text-uppercase mb-3 animated slideInDown">Discoover Scuba Diving In Sri Lanka</h5>
-                    <h2 class="display-1 text-white mb-md-4 animated zoomIn">A New Discovery Awaits</h2>
-                    <a href="view_booking_page" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Book Now</a>
-                    <a href="/#contact_section" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -56,11 +35,12 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+@endif
 
 <!-- Carousel End -->
 
 <!-- Banner Section Start -->
-
+@if(setting_on('home.show_facts'))
 <section class="banner-section">
     <div class="banner-container">
         <div class="banner">
@@ -71,39 +51,20 @@
             <div class="content-wrapper">
                 <!-- Left: Main Text -->
                 <div class="text-content">
-                    <div class="badge">Marine Wildlife Experience</div>
-                    <h1 style="color: #f0f8ff;">🐋 Blue Whales – The <span class="highlight">Gentle Giants</span> of Mirissa</h1>
+                    <div class="badge">{{ setting('facts.badge') }}</div>
+                    <h1 style="color: #f0f8ff;">{!! cms_highlight(setting('facts.heading'), 'highlight') !!}</h1>
                     
                     <p class="intro">
-                        Did you know the <strong>Blue Whale</strong> is the largest animal ever to live on Earth 🌍 — even bigger than dinosaurs? 
-                        Join us in Mirissa for an unforgettable adventure with these ocean giants.
+                        {!! cms_html(setting('facts.intro')) !!}
                     </p>
 
                     <div class="facts-container">
-                        <div class="fact-item">
-                            <div class="fact-icon">📏</div>
-                            <div class="fact-text">22–27 meters long (that’s 3 buses 🚍🚍🚍)</div>
-                        </div>
-                        <div class="fact-item">
-                            <div class="fact-icon">👩‍🦱</div>
-                            <div class="fact-text">Females are usually larger than males</div>
-                        </div>
-                        <div class="fact-item">
-                            <div class="fact-icon">🐋</div>
-                            <div class="fact-text">Record: 33 meters long, 150 tons (1926)</div>
-                        </div>
-                        <div class="fact-item">
-                            <div class="fact-icon">⚖️</div>
-                            <div class="fact-text">As heavy as 2,700 people combined</div>
-                        </div>
-                        <div class="fact-item">
-                            <div class="fact-icon">❤️</div>
-                            <div class="fact-text">Heart the size of a car 🚗</div>
-                        </div>
-                        <div class="fact-item">
-                            <div class="fact-icon">🔊</div>
-                            <div class="fact-text">Loudest animal on Earth, heard hundreds of km away</div>
-                        </div>
+                        @foreach(cms_pairs('facts.items') as $fact)
+                            <div class="fact-item">
+                                <div class="fact-icon">{{ $fact['icon'] }}</div>
+                                <div class="fact-text">{{ $fact['text'] }}</div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 
@@ -112,95 +73,90 @@
 
                     <div class="season-info">
                         <div class="season-icon">🌴</div>
-                        <div class="season-text">
-                            Why <strong>Mirissa</strong>?  
-                            It’s one of the <em>world’s best places</em> to see Blue Whales up close, 
-                            along with Sperm Whales and playful Dolphins 🐬 — just a short ride from shore.
-                        </div>
+                        <div class="season-text">{!! cms_html(setting('facts.box1')) !!}</div>
                     </div>
 
                     <div class="season-info">
                         <div class="season-icon">👉</div>
-                        <div class="season-text">
-                            Join us in <strong>Mirissa</strong> and witness the largest animals on Earth in their natural home.  
-                            A once-in-a-lifetime adventure awaits! 🐋🌊
-                        </div>
+                        <div class="season-text">{!! cms_html(setting('facts.box2')) !!}</div>
                     </div>
                     
                     <br><br>
                     <a href="view_booking_page" class="cta-button">
-                        Join a Whale Watching Tour 🐋
+                        {{ setting('facts.btn_book') }}
                     </a>
                     <br>
                     <a href="view_blue_whale_snorkeling" class="cta-button">
-                        Read More 🐋
+                        {{ setting('facts.btn_more') }}
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
+@endif
 <!-- Banner Section End -->
 
 <!-- Banner Section Start -->
-
+@if(setting_on('home.show_whatsapp'))
 <section class="container py-3">
     <section class="wantToWork-area" 
-        style="background-image: url('{{ asset (env('ASSET_PREFIX', '').'img/section_bg01.png') }}'); background-size: cover; background-position: center;">
+        style="background-image: url('{{ site_asset(setting('whatsapp.bg')) }}'); background-size: cover; background-position: center;">
 
         <div class="wants-wrapper w-padding2">
             <div class="row align-items-center justify-content-between">
                 <div class="col-xl-8 col-lg-9 col-md-7">
                     <div class="wantToWork-caption wantToWork-caption2">
-                        <h2>Contact Us on WhatsApp Anytime!</h2>
-                        <p>Reach out to us instantly for inquiries, bookings, or support. Click below to chat with us on WhatsApp</p>
+                        <h2>{{ setting('whatsapp.heading') }}</h2>
+                        <p>{{ setting('whatsapp.text') }}</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-5">
                     <a href="#" id="whatsappBtn" class="btn wantToWork-btn btn btn-primary py-3 px-5">
-                        <img src="{{ asset (env('ASSET_PREFIX', '').'img/whatsapp_s_size.png')}}" alt=""> Chat on WhatsApp
+                        <img src="{{ asset (env('ASSET_PREFIX', '').'img/whatsapp_s_size.png')}}" alt=""> {{ setting('whatsapp.button') }}
                     </a>
                 </div>
             </div>
         </div>
     </section>
 </section>
-
+@endif
 <!-- Banner Section End -->
 
 <!-- About Start -->
+@if(setting_on('home.show_about'))
 <div class="container-xxl py-3" id="aboutus_section">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="section-title position-relative pb-3 mb-3">
-                    <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
-                    <h1 class="display-6 mb-0">Let us make your diving experience unforgettable</h1>
+                    <h5 class="fw-bold text-primary text-uppercase">{{ setting('about.label') }}</h5>
+                    <h1 class="display-6 mb-0">{{ setting('about.heading') }}</h1>
                 </div>
-                <p class="mb-4">Dive into the beauty of Mirissa Bay with our Diving, Snorkeling, and Blue Whale Tours. Discover vibrant coral reefs, swim with colorful marine life, and experience the awe of seeing majestic blue whales. Perfect for adventurers and nature lovers, we promise an unforgettable ocean experience.</p>
-                <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Satisfaction Gurantee</p>
-                <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Complete Equipment</p>
-                <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Experienced Skipper & Divers</p>
+                <p class="mb-4">{{ setting('about.text') }}</p>
+                @foreach(cms_lines('about.points') as $point)
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>{{ $point }}</p>
+                @endforeach
                 <div class="bg-primary d-flex align-items-center p-4 mt-5">
                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
                         <i class="fa fa-phone-alt fa-2x text-primary"></i>
                     </div>
                     <div class="ms-3">
-                        <p class="fs-5 fw-medium mb-2 text-white">More About Us 24/7</p>
-                        <h3 class="m-0">702050138</h3>
+                        <p class="fs-5 fw-medium mb-2 text-white">{{ setting('about.call_label') }}</p>
+                        <h3 class="m-0">{{ setting('about.call_number') }}</h3>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 pt-2" style="min-height: 500px;">
                 <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                    <img class="position-absolute img-fluid w-100 h-100" src="{{ asset (env('ASSET_PREFIX', '').'img/about-5.png')}}" style="object-fit: cover; padding: 0 0 50px 100px;" alt="Snorkeling">
-                    <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="{{ asset (env('ASSET_PREFIX', '').'img/about-2.jpg')}}" style="object-fit: cover;" alt="Snorkeling">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{{ site_asset(setting('about.image_main')) }}" style="object-fit: cover; padding: 0 0 50px 100px;" alt="Snorkeling">
+                    <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="{{ site_asset(setting('about.image_small')) }}" style="object-fit: cover;" alt="Snorkeling">
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endif
 <!-- About End -->
 
 <style>
@@ -218,8 +174,9 @@
         }
 </style>
 
+@if(setting_on('home.show_whale'))
 <section class="banner_01">
-    <div class="banner-container" onclick="window.location.href='whale-snorkeling-page.html'">
+    <div class="banner-container" onclick="window.location.href='{{ setting('whale.link') }}'">
         <div class="banner">
             <div class="ocean">
                 <div class="wave"></div>
@@ -230,10 +187,9 @@
             <div class="water-spout"></div>
             <div class="bubbles" id="bubbles"></div>
             <div class="content">
-                <h1 class="title">BLUE WHALE SNORKELING</h1>
-                <p class="subtitle">Dive into an unforgettable adventure in Mirissa and snorkel alongside majestic whales
-                    and playful dolphins in the crystal-clear waters of the Indian Ocean.</p>
-                <button class="cta-button">READ MORE</button>
+                <h1 class="title">{{ setting('whale.title') }}</h1>
+                <p class="subtitle">{{ setting('whale.subtitle') }}</p>
+                <button class="cta-button">{{ setting('whale.button') }}</button>
             </div>
         </div>
     </div>
@@ -263,151 +219,72 @@
 
         // Redirect when banner is clicked
         document.querySelector('.banner-container').addEventListener('click', function() {
-            window.location.href = 'whale-snorkeling-page.html';
+            window.location.href = @json(setting('whale.link'));
         });
     </script>
 </section>
+@endif
 
 <!-- Services Start -->
+@if(setting_on('home.show_services') && $packages->count())
  <div class="container-fluid py-2 wow fadeInUp" data-wow-delay="0.1s" id="services_section">
     <div class="container">
         <div class="row g-2">
             <div class="section-title text-center position-relative pb-3 mb-2 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
-                <h2 class="display-6 mb-0">What Services We Have</h2>
+                <h5 class="fw-bold text-primary text-uppercase">{{ setting('services.label') }}</h5>
+                <h2 class="display-6 mb-0">{{ setting('services.heading') }}</h2>
             </div>
             <div class="col-lg-12">
                 <div class="owl-carousel price-carousel wow zoomIn" data-wow-delay="0.9s">
-
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <span class="price-tag">$50</span>
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-4.png')}}" alt="Snorkeling">
+                    @foreach($packages as $package)
+                        <div class="price-item pb-4">
+                            <div class="position-relative">
+                                @if($package->price_tag)
+                                    <span class="price-tag">{{ $package->price_tag }}</span>
+                                @endif
+                                @if($package->image)
+                                    <img class="img-fluid rounded-top" src="{{ site_asset($package->image) }}" alt="{{ $package->name }}">
+                                @endif
+                            </div>
+                            <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
+                                <h4>{{ $package->name }}</h4>
+                                <hr class="text-primary w-50 mx-auto mt-0">
+                                @foreach((array) $package->features as $feature)
+                                    <div class="d-flex justify-content-between mb-3"><span>{{ $feature }}</span><i class="fa fa-check text-primary pt-1"></i></div>
+                                @endforeach
+                                @if($package->detail_url)
+                                    <a href="{{ $package->detail_url }}" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">{{ setting('services.button') }}</a>
+                                @endif
+                            </div>
                         </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Blue Whale Watching</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Pickup 6 am</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Breakfast Tea, Coffee,Fruits</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>3 to 5 Hrs</span><i class="fa fa-check text-primary pt-1"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <!-- <span class="price-tag">From $150</span> -->
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-14.jpg')}}" alt="Snorkeling">
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Blue Whale Snorkeling</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Pickup 6 am</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Breakfast Tea, Coffee,Fruits</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>3 to 5 Hrs</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Gopro Camera</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-4"><span>Tirtule, Dolphin Watching</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <a href="view_blue_whale_snorkeling" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Read More</a>
-                        </div>
-                    </div>
-
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <!-- <span class="price-tag">$120</span> -->
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-15.png')}}" alt="Snorkeling">
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Dolpin Snorkeling</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Pickup Best Time 6 - 10 am</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Breakfast Tea, Coffee,Fruits</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>3 Hrs to 4 Hrs</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Gopro Camera</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <span class="price-tag">$20</span>
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-7.jpg')}}" alt="Snorkeling">
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Turtle Snorkeling Shallow Water</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Best Time 8am to 1pm</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Gopro Camera</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>2 Hours tour </span><i class="fa fa-check text-primary pt-1"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <span class="price-tag">$125</span>
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-9.jpg')}}" alt="Snorkeling">
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Deep Sea Fishing Tour</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Pickup 6am</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Breakfast Fruits</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>3 Hrs</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Gopro Camera</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Fishing, Jumping Fishing</span><i class="fa fa-check text-primary pt-1"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <span class="price-tag">$80</span>
-                            <img class="img-fluid rounded-top" src="{{ asset (env('ASSET_PREFIX', '').'img/price-10.jpg')}}" alt="Snorkeling">
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-2 p-4">
-                            <h4>Discovery scuba diving DSD</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Pickup 8am 2pm and Drop</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Breakfast Fruits</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>3 hrs ~ 2 Diving Shallow Water Training 8 Meters 2nd Diving 15 Meters</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Swimming Equipments</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Gopro Camera</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Water Bottles</span><i class="fa fa-check text-primary pt-1"></i></div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endif
 <!-- Services End -->
 
 <!-- Why Choose Us Start -->
+@if(setting_on('home.show_why'))
 
 <div class="container-fluid py-5 bg-light">
     <div class="container">
         <div class="row align-items-center">
             <!-- Left Column: Text -->
             <div class="col-lg-6 mb-5">
-                <small class="bg-primary text-white text-uppercase font-weight-bold px-2 py-1 rounded">Why Choose Us</small>
-                <h1 class="mt-3 mb-3">Your Ultimate Marine Adventure in Mirissa</h1>
-                <p class="text-muted mb-4">
-                    Enjoy a safe, comfortable, and unforgettable adventure on the waters of Mirissa with our expert team.
-                </p>
+                <small class="bg-primary text-white text-uppercase font-weight-bold px-2 py-1 rounded">{{ setting('why.badge') }}</small>
+                <h1 class="mt-3 mb-3">{{ setting('why.heading') }}</h1>
+                <p class="text-muted mb-4">{{ setting('why.text') }}</p>
                 <div class="mb-4">
-                    <p class="mb-2">
-                        <i class="fa fa-check-circle text-primary me-2"></i>Eco-Friendly & Safe Marine Experiences
-                    </p>
-                    <p class="mb-2">
-                        <i class="fa fa-check-circle text-primary me-2"></i>Professional & Experienced Crew
-                    </p>
+                    @foreach(cms_lines('why.points') as $point)
+                        <p class="mb-2">
+                            <i class="fa fa-check-circle text-primary me-2"></i>{{ $point }}
+                        </p>
+                    @endforeach
                 </div>
-                <a href="/view_booking_page" class="btn btn-primary btn-lg">Book Your Adventure</a>
+                <a href="/view_booking_page" class="btn btn-primary btn-lg">{{ setting('why.button') }}</a>
             </div>
 
             <!-- Right Column: Stats Cards -->
@@ -415,26 +292,26 @@
                 <div class="row g-4">
                     <div class="col-sm-6">
                         <div class="card shadow-sm text-center border-0 rounded-3 p-4 hover-shadow">
-                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">20+</h2>
-                            <p class="fw-bold mb-0">Years of Experience</p>
+                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">{{ setting('why.stat1_value') }}</h2>
+                            <p class="fw-bold mb-0">{{ setting('why.stat1_label') }}</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="card shadow-sm text-center border-0 rounded-3 p-4 hover-shadow">
-                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">8960+</h2>
-                            <p class="fw-bold mb-0">Happy Travelers</p>
+                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">{{ setting('why.stat2_value') }}</h2>
+                            <p class="fw-bold mb-0">{{ setting('why.stat2_label') }}</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="card shadow-sm text-center border-0 rounded-3 p-4 hover-shadow">
-                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">25+</h2>
-                            <p class="fw-bold mb-0">Adventure Options</p>
+                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">{{ setting('why.stat3_value') }}</h2>
+                            <p class="fw-bold mb-0">{{ setting('why.stat3_label') }}</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="card shadow-sm text-center border-0 rounded-3 p-4 hover-shadow">
-                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">100%</h2>
-                            <p class="fw-bold mb-0">Eco-Friendly & Safe Tours</p>
+                            <h2 class="display-4 text-primary mb-2" data-toggle="counter-up">{{ setting('why.stat4_value') }}</h2>
+                            <p class="fw-bold mb-0">{{ setting('why.stat4_label') }}</p>
                         </div>
                     </div>
                 </div>
@@ -450,113 +327,56 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
 }
 </style>
-
+@endif
 <!-- Why Choose Us End -->
 
 <!-- Gallery Start -->
+@if(setting_on('home.show_gallery'))
 <div class="container-xxl py-3" id="gallery_section">
     <div class="container">
         <div class="row g-5 mb-5 align-items-end wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-lg-6">
-                <p><span class="text-primary me-2">#</span>Our Gallery</p>
+                <p><span class="text-primary me-2">#</span>{{ setting('gallery.label') }}</p>
                 <h2 class="display-6 mb-0">
-                    Let`s See Our <span class="text-primary">Gallery</span> Awsome
-                    Memories
+                    {!! cms_highlight(setting('gallery.heading')) !!}
                 </h2>
             </div>
             <div class="col-lg-6 text-lg-end">
-                <a class="btn btn-primary py-3 px-5" href="view_gallery_section">Explore More Images</a>
+                <a class="btn btn-primary py-3 px-5" href="view_gallery_section">{{ setting('gallery.button') }}</a>
             </div>
         </div>
         <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <a class="animal-item" href="{{ asset (env('ASSET_PREFIX', '').'img/gallery-1.jpg')}}" data-lightbox="animal"> 
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset (env('ASSET_PREFIX', '').'img/gallery-1.jpg')}}" alt="Snorkeling" />
-                                <div class="animal-text p-4">
-                                    <p class="text-white small text-uppercase mb-0">12/09/2024</p>
-                                    <h5 class="text-white mb-0">Mirissa sri lanka</h5>
-                                </div>
+            @foreach($homeGallery->chunk(2) as $index => $column)
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="{{ 0.1 + ($loop->index * 0.2) }}s">
+                    <div class="row g-4">
+                        @foreach($column as $photo)
+                            <div class="col-12">
+                                <a class="animal-item" href="{{ site_asset($photo->image) }}" data-lightbox="animal">
+                                    <div class="position-relative">
+                                        <img class="img-fluid" src="{{ site_asset($photo->image) }}" alt="{{ $photo->alt ?: 'Snorkeling' }}" />
+                                        <div class="animal-text p-4">
+                                            @if($photo->caption)<p class="text-white small text-uppercase mb-0">{{ $photo->caption }}</p>@endif
+                                            @if($photo->title)<h5 class="text-white mb-0">{{ $photo->title }}</h5>@endif
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a class="animal-item" href="{{ asset (env('ASSET_PREFIX', '').'img/gallery-2.jpeg')}}" data-lightbox="animal">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset (env('ASSET_PREFIX', '').'img/gallery-2.jpeg')}}" alt="Snorkeling" />
-                                <div class="animal-text p-4">
-                                    <p class="text-white small text-uppercase mb-0">12/09/2024</p>
-                                    <h5 class="text-white mb-0">Mirissa sri lanka</h5>
-                                </div>
-                            </div>
-                        </a>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <a class="animal-item" href="{{ asset (env('ASSET_PREFIX', '').'img/gallery-7.jpeg')}}" data-lightbox="animal">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset (env('ASSET_PREFIX', '').'img/gallery-7.jpeg')}}" alt="Snorkeling" />
-                                <div class="animal-text p-4">
-                                    <p class="text-white small text-uppercase mb-0">12/09/2024</p>
-                                    <h5 class="text-white mb-0">Mirissa sri lanka</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a class="animal-item" href="{{ asset (env('ASSET_PREFIX', '').'img/gallery-4.jpg')}}" data-lightbox="animal">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset (env('ASSET_PREFIX', '').'img/gallery-4.jpg')}}" alt="Snorkeling" />
-                                <div class="animal-text p-4">
-                                    <p class="text-white small text-uppercase mb-0">12/09/2024</p>
-                                    <h5 class="text-white mb-0">Mirissa sri lanka</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <a class="animal-item" href="{{ asset (env('ASSET_PREFIX', '').'img/gallery-5.jpg')}}" data-lightbox="animal">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset (env('ASSET_PREFIX', '').'img/gallery-5.jpg')}}" alt="Snorkeling" />
-                                <div class="animal-text p-4">
-                                    <p class="text-white small text-uppercase mb-0">12/09/2024</p>
-                                    <h5 class="text-white mb-0">Mirissa sri lanka</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12">
-                        <a class="animal-item" href="{{ asset (env('ASSET_PREFIX', '').'img/gallery-6.jpg')}}" data-lightbox="animal">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{{ asset (env('ASSET_PREFIX', '').'img/gallery-6.jpg')}}" alt="Snorkeling" />
-                                <div class="animal-text p-4">
-                                    <p class="text-white small text-uppercase mb-0">12/09/2024</p>
-                                    <h5 class="text-white mb-0">Mirissa sri lanka</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
+@endif
 <!-- Gallery End -->
 
 <!-- Reviews Start -->
+@if(setting_on('home.show_reviews'))
 <div class="container" id="reviews_section">
     <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-        <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
-        <h2 class="display-6 mb-0">What Clients Say About Us</h2>
+        <h5 class="fw-bold text-primary text-uppercase">{{ setting('reviews.label') }}</h5>
+        <h2 class="display-6 mb-0">{{ setting('reviews.heading') }}</h2>
     </div>
     
     <div class="reviews-container">
@@ -573,7 +393,7 @@
                 </div>
                 
                 <!-- Google Logo instead of review text -->
-                <a href="https://www.google.com/search?hl=en-LK&gl=lk&q=Mirissa+Bay+Diving+Blue+Whale+Turtle+Snorkeling,+Badugoda,+R.+Situm,+214,+A2,+Mirissa&ludocid=5718689178518660128&lsig=AB86z5V5df7w480jxPbg3AgRGDEO#lrd=0x3ae1159bd02c3cc7:0x4f5cdd824a79a420,1,,,,"
+                <a href="{{ setting('reviews.google_url') }}"
                 target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" 
                         alt="Google Reviews" 
@@ -583,11 +403,11 @@
         </div>
         
         <div class="review-buttons">
-            <button class="view-reviews-btn" onclick="window.open('https://www.google.com/search?hl=en-LK&gl=lk&q=Mirissa+Bay+Diving+Blue+Whale+Turtle+Snorkeling,+Badugoda,+R.+Situm,+214,+A2,+Mirissa&ludocid=5718689178518660128&lsig=AB86z5V5df7w480jxPbg3AgRGDEO#lrd=0x3ae1159bd02c3cc7:0x4f5cdd824a79a420,1,,,,', '_blank')">
+            <button class="view-reviews-btn" onclick="window.open({{ json_encode(setting('reviews.google_url')) }}, '_blank')">
                 <i class="fas fa-star"></i> View Google Reviews
             </button>
             
-            <button class="add-review-btn" onclick="window.open('https://search.google.com/local/writereview?placeid=ChIJxzws0JsV4ToRIKR5SoLdXE8', '_blank')">
+            <button class="add-review-btn" onclick="window.open({{ json_encode(setting('reviews.write_url')) }}, '_blank')">
                 <i class="fab fa-google"></i> Add Google Review
             </button>
         </div>
@@ -789,6 +609,7 @@
         </div>
     </div>
 </div>
+@endif
 <!-- Reviews End -->
 
 <!-- Add Owl Carousel CSS -->
@@ -825,11 +646,12 @@
 </script>
 
 <!-- Contact Start -->
+@if(setting_on('home.show_contact'))
 <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s" id="contact_section">
     <div class="container py-3">
         <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-            <h5 class="fw-bold text-primary text-uppercase">Contact Us</h5>
-            <h2 class="display-6 mb-0">If You Have Any Query, Feel Free To Contact Us</h2>
+            <h5 class="fw-bold text-primary text-uppercase">{{ setting('contact.label') }}</h5>
+            <h2 class="display-6 mb-0">{{ setting('contact.heading') }}</h2>
         </div>
         <div class="row g-5 mb-5">
             <div class="col-lg-4">
@@ -838,8 +660,8 @@
                         <i class="fa fa-phone-alt text-white"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-2">Call to ask any question</h5>
-                        <h4 class="text-primary mb-0">+94 70 205 0138</h4>
+                        <h5 class="mb-2">{{ setting('contact.call_label') }}</h5>
+                        <h4 class="text-primary mb-0"><a href="tel:{{ preg_replace('/[^\d+]/', '', setting('contact.phone')) }}" class="text-primary">{{ setting('contact.phone') }}</a></h4>
                     </div>
                 </div>
             </div>
@@ -849,10 +671,10 @@
                         <i class="fa fa-envelope-open text-white"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-2">Email to get free quote</h5>
+                        <h5 class="mb-2">{{ setting('contact.email_label') }}</h5>
                         <h4 class="text-primary mb-0" style="text-transform: lowercase;">
-                            <a href="" class="text-primary" title="mirissabaydiving@gmail.com" target="_blank">
-                                mirissabaydiving@gmail.com
+                            <a href="mailto:{{ setting('contact.email') }}" class="text-primary" title="{{ setting('contact.email') }}">
+                                {{ setting('contact.email') }}
                             </a>
                         </h4>
                     </div>
@@ -864,8 +686,8 @@
                         <i class="fa fa-map-marker-alt text-white"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-2">Visit our office</h5>
-                        <h4 class="text-primary mb-0">R. Situm, 214, A2, Mirissa</h4>
+                        <h5 class="mb-2">{{ setting('contact.visit_label') }}</h5>
+                        <h4 class="text-primary mb-0">{{ setting('contact.address_short') }}</h4>
                     </div>
                 </div>
             </div>
@@ -887,20 +709,21 @@
                             <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" id="message" placeholder="Message"></textarea>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" onclick="saveContact_page();" id="contactBtn" value="S E N D  M E S S A G E" type="button">Send Message</button>
+                            <button class="btn btn-primary w-100 py-3" onclick="saveContact_page();" id="contactBtn" value="S E N D  M E S S A G E" type="button">{{ setting('contact.button') }}</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
                 <iframe class="position-relative rounded w-100 h-100"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.3668856612003!2d80.4606568!3d5.9440713999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1159bd02c3cc7%3A0x4f5cdd824a79a420!2sMirissa%20Bay%20Diving%20Snorkeling%20and%20Blue%20Whale%20Tour!5e0!3m2!1sen!2slk!4v1735471284905!5m2!1sen!2slk"
+                    src="{{ setting('contact.map_embed') }}"
                     frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0"></iframe>
             </div>
         </div>
     </div>
 </div>
+@endif
 <!-- Contact End -->
 
 <script>
@@ -956,7 +779,7 @@ function saveContact_page() {
                         imageHeight: 60,
                         imageAlt: 'logo',
                         color: '#121518',
-                        text: 'Thank you for getting in touch! We appreciate you contacting us',
+                        text: @json(setting('booking.success')),
                         showConfirmButton: false,
                         timer: 2500
                     }).then((result) => {
@@ -988,6 +811,19 @@ function saveContact_page() {
                         // window.location.href = 'view_contact_page';
                     })
                 }
+            },
+            error: function (xhr) {
+                var msg = (xhr.status === 422 && xhr.responseText) ? xhr.responseText : 'Oops! Something went wrong. Please try again or contact us on WhatsApp.';
+                Swal.fire({
+                    position: 'center',
+                    imageUrl: '{{ site_asset('img/logo.png') }}',
+                    imageHeight: 60,
+                    imageAlt: 'logo',
+                    color: '#121518',
+                    text: msg,
+                    showConfirmButton: true,
+                    confirmButtonColor: '#fdbe33'
+                });
             }
 
         })
@@ -1011,16 +847,16 @@ document.getElementById("whatsappBtn").addEventListener("click", function (e) {
         },
         body: JSON.stringify({
             action: 'whatsapp_click',
-            phone: '94702050138'
+            phone: @json(setting('contact.whatsapp'))
         })
     })
     .then(response => response.json())
     .then(data => {
-        window.open("https://wa.me/94702050138", "_blank");
+        window.open("https://wa.me/" + @json(setting('contact.whatsapp')), "_blank");
     })
     .catch(error => {
         console.error("Logging failed", error);
-        window.open("https://wa.me/94702050138", "_blank");
+        window.open("https://wa.me/" + @json(setting('contact.whatsapp')), "_blank");
     });
 });
 

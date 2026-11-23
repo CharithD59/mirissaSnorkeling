@@ -4,16 +4,16 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dive into the beauty of Mirissa Bay with our Diving, Snorkeling, and Blue Whale Tours">
-    <title>Mirissa Bay Diving Snorkeling and Blue Whale Tour</title>
+    <meta name="description" content="{{ setting('site.meta_description') }}">
+    <title>{{ setting('site.name') }}</title>
     <link rel="canonical" href="{{ url()->current() }}" />
-    <link rel="icon" type="image/x-icon" href="{{ asset (env('ASSET_PREFIX', '').'img/favicon.png')}}">  
+    <link rel="icon" type="image/x-icon" href="{{ site_asset(setting('site.favicon')) }}">  
 
-    <meta property="og:title" content="Mirissa Bay Diving Snorkeling and Blue Whale Tour" />
+    <meta property="og:title" content="{{ setting('site.name') }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mirissabaybluewhalesnorkelingtour.com/" />
     <meta property="og:image" content="https://mirissabaybluewhalesnorkelingtour.com/public/img/carousel-6.png" />
-    <meta property="og:description" content="Dive into the beauty of Mirissa Bay with our Diving, Snorkeling, and Blue Whale Tours" />
+    <meta property="og:description" content="{{ setting('site.meta_description') }}" />
     <meta property="og:site_name" content="Mirissa Bay Diving Snorkeling and Blue Whale Tour" />
     <meta property="og:locale" content="en_US" />
 
@@ -122,19 +122,19 @@
     <div class="row gx-0">
         <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Badugoda, R. Situm, 214, A2, Mirissa</small>
-                <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+94 70 205 0138</small>
-                <small class="text-light"><i class="fa fa-envelope-open me-2"></i>mirissabaydiving@gmail.com</small>
+                <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>{{ setting('contact.address_full') }}</small>
+                <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>{{ setting('contact.phone') }}</small>
+                <small class="text-light"><i class="fa fa-envelope-open me-2"></i>{{ setting('contact.email') }}</small>
             </div>
         </div>
         <div class="col-lg-4 text-center text-lg-end">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/mirissabaydiving" target="_blank"><i
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ setting('social.facebook') }}" target="_blank"><i
                         class="fab fa-facebook-f fw-normal"></i></a>
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/srilankabluewhalesnorkeling?igsh=MWl1OHl2YzdjaDhmYg==" target="_blank"><i
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{ setting('social.instagram') }}" target="_blank"><i
                         class="fab fa-instagram fw-normal"></i></a>
-                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.google.com/maps?ll=5.944071,80.460657&z=16&t=m&hl=en&gl=LK&mapclient=embed&cid=5718689178518660128" target="_blank"><i
-                        class="fab fa-youtube fw-normal"></i></a>
+                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="{{ setting('social.google_maps') }}" target="_blank"><i
+                        class="fas fa-map-marker-alt fw-normal"></i></a>
             </div>
         </div>
     </div>
@@ -169,7 +169,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
         <div class="logo">
             <a href="/">
-                <img src="{{ asset (env('ASSET_PREFIX', '').'img/logoP.png')}}" alt="Logo"> 
+                <img src="{{ site_asset(setting('site.logo')) }}" alt="Logo"> 
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

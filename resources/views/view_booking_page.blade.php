@@ -2,7 +2,7 @@
 
 <!-- Page Header Start -->
 <div class="container-fluid page-header_booking">
-    <h1 class="display-3 text-uppercase text-white mb-3">Online Booking</h1>
+    <h1 class="display-3 text-uppercase text-white mb-3">{{ setting('booking.page_title') }}</h1>
     <div class="d-inline-flex text-white">
         <h6 class="text-uppercase m-0"><a class="text-white" href="/">HOME</a></h6>
         <h6 class="text-body m-0 px-3">/</h6>
@@ -16,18 +16,16 @@
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
-                <h5 class="section-booking-title pe-3">Booking</h5>
-                <h1 class="text-white mb-4">Online Booking</h1>
-                <p class="text-white mb-4">Easily book your diving, snorkeling, or blue whale tour online and secure your spot for an unforgettable adventure in Mirissa Bay.
-                </p>
-                <p class="text-white mb-4">Our user-friendly platform ensures a seamless booking process, so you can focus on planning your dream ocean experience.
-                </p>
+                <h5 class="section-booking-title pe-3">{{ setting('booking.label') }}</h5>
+                <h1 class="text-white mb-4">{{ setting('booking.heading') }}</h1>
+                <p class="text-white mb-4">{{ setting('booking.text1') }}</p>
+                <p class="text-white mb-4">{{ setting('booking.text2') }}</p>
                 <!-- <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a> -->
             </div>
             <div class="col-lg-6">
-                <h1 class="text-white mb-3">Book A Mirissa Bay Diving</h1>
-                <p class="text-white mb-4"> <span class="text-warning">Exclusive Discounts:</span>  
-                    Book now and enjoy special deals on our diving, snorkeling, and blue whale tours. Get more exciting offers here and make your Mirissa Bay adventure unforgettable!</p>
+                <h1 class="text-white mb-3">{{ setting('booking.form_title') }}</h1>
+                <p class="text-white mb-4"> <span class="text-warning">{{ setting('booking.offer_title') }}</span>
+                    {{ setting('booking.offer_text') }}</p>
                 <form>
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -53,7 +51,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating date" id="date3" data-target-input="nearest">
-                                <input type="date" class="form-control bg-white border-0" id="datetime"
+                                <input type="date" min="{{ now()->toDateString() }}" class="form-control bg-white border-0" id="datetime"
                                     placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
                                 <label for="datetime">Date & Time</label>
                             </div>
@@ -88,15 +86,9 @@
                         <div class="col-md-6">
                             <div class="form-floating">
                                 <select class="form-select bg-white border-0" id="selectServices">
-                                    <option value="Blue Whale Watching">Blue Whale Watching</option>
-                                    <option value="Blue Whale Snorkeling">Blue Whale Snorkeling</option>
-                                    <option value="Dolpin Snorkeling">Dolpin Snorkeling</option>
-                                    <option value="Turtle Snorkeling Shallow Water">Turtle Snorkeling Shallow Water</option>
-                                    <option value="Free diving">Free diving</option>
-                                    <option value="Deep Sea Fishing Tour">Deep Sea Fishing Tour</option>
-                                    <option value="Discovery scuba diving DSD">Discovery scuba diving DSD</option>
-                                    <option value="Front Diving">Front Diving</option>
-                                    <option value="Reef Diving">Reef Diving</option>
+                                    @foreach($packages as $package)
+                                        <option value="{{ $package->name }}" @if(request('service') === $package->name || request('service') === $package->slug) selected @endif>{{ $package->name }}{{ $package->price_tag ? ' (' . $package->price_tag . ')' : '' }}</option>
+                                    @endforeach
                                 </select>
                                 <label for="select1">Services</label>
                             </div>
@@ -109,7 +101,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary text-white w-100 py-3" onclick="saveBooking_page();" id="bookingBtn" value="S E N D  B O O K I N G" type="button">Book Now</button>
+                            <button class="btn btn-primary text-white w-100 py-3" onclick="saveBooking_page();" id="bookingBtn" value="S E N D  B O O K I N G" type="button">{{ setting('booking.button') }}</button>
                         </div>
                     </div>
                 </form>
@@ -181,7 +173,7 @@ function saveBooking_page() {
                         imageHeight: 60,
                         imageAlt: 'logo',
                         color: '#121518',
-                        text: 'Thank you for getting in touch! We appreciate you contacting us',
+                        text: @json(setting('booking.success')),
                         showConfirmButton: false,
                         timer: 2500
                     }).then((result) => {
@@ -210,6 +202,19 @@ function saveBooking_page() {
                         // window.location.href = 'view_contact_page';
                     })
                 }
+            },
+            error: function (xhr) {
+                var msg = (xhr.status === 422 && xhr.responseText) ? xhr.responseText : 'Oops! Something went wrong. Please try again or contact us on WhatsApp.';
+                Swal.fire({
+                    position: 'center',
+                    imageUrl: '{{ site_asset('img/logo.png') }}',
+                    imageHeight: 60,
+                    imageAlt: 'logo',
+                    color: '#121518',
+                    text: msg,
+                    showConfirmButton: true,
+                    confirmButtonColor: '#fdbe33'
+                });
             }
 
         })
