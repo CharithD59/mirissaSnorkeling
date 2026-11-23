@@ -310,7 +310,7 @@
                     <div class="card-badge">Most Popular</div>
                     <h2 class="card-title">Group Boat Tour</h2>
                     <p class="card-subtitle">Join fellow adventurers</p>
-                    <div class="card-price">$500<span>/4 People</span></div>
+                    <div class="card-price">$450<span>/4 People</span></div>
                 </div>
                 <div class="card-body">
                     <ul class="features-list">
@@ -361,7 +361,7 @@
                     <div class="card-badge">Exclusive</div>
                     <h2 class="card-title">Private Boat Tour</h2>
                     <p class="card-subtitle">Solo adventurer experience</p>
-                    <div class="card-price">$325<span>/person</span></div>
+                    <div class="card-price">$300<span>/person</span></div>
                 </div>
                 <div class="card-body">
                     <ul class="features-list">
@@ -387,7 +387,7 @@
                     <div class="card-badge">Perfect for Couples</div>
                     <h2 class="card-title">Private Boat Tour</h2>
                     <p class="card-subtitle">Romantic adventure for two</p>
-                    <div class="card-price">$400<span>/2 People</span></div>
+                    <div class="card-price">$350<span>/2 People</span></div>
                 </div>
                 <div class="card-body">
                     <ul class="features-list">

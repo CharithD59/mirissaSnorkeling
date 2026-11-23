@@ -122,7 +122,7 @@
     <div class="row gx-0">
         <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
             <div class="d-inline-flex align-items-center" style="height: 45px;">
-                <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Badugoda, R. Situm, 214, A2, Mirissa</small>
+                <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>sssBadugoda, R. Situm, 214, A2, Mirissa</small>
                 <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+94 70 205 0138</small>
                 <small class="text-light"><i class="fa fa-envelope-open me-2"></i>mirissabaydiving@gmail.com</small>
             </div>

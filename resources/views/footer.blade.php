@@ -61,8 +61,13 @@
 <a href="#" class="btn btn-lg btn-primary btn-lg-square-top back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 <!-- WhatsApp Floating Button -->
-<a href="#" id="whatsappFloatBtn" class="whatsapp-float">
-    <img src="{{ asset (env('ASSET_PREFIX', '').'img/whatsapp_l_size.png')}}" alt="Chat on WhatsApp"> 
+<a href="https://wa.me/94702050138"
+   id="whatsappFloatBtn"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener">
+    <img src="{{ asset(env('ASSET_PREFIX','').'img/whatsapp_l_size.png') }}"
+         alt="Chat on WhatsApp">
 </a>
 
 <!-- JavaScript Libraries -->
@@ -81,29 +86,25 @@
      crossorigin="anonymous"></script>
 
 <script>
-    document.getElementById("whatsappFloatBtn").addEventListener("click", function (e) {
-        e.preventDefault(); // Prevent immediate redirect
+document.getElementById("whatsappFloatBtn").addEventListener("click", function () {
 
-        fetch('/log-whatsapp-click', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
-            },
-            body: JSON.stringify({
-                action: 'whatsapp_floating_click',
-                phone: '94702050138'
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            window.open("https://wa.me/94702050138", "_blank");
-        })
-        .catch(error => {
-            console.error("Logging failed", error);
-            window.open("https://wa.me/94702050138", "_blank");
-        });
+    // Fire-and-forget logging (NO blocking)
+    fetch('/log-whatsapp-click', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        },
+        body: JSON.stringify({
+            action: 'whatsapp_floating_click',
+            phone: '94702050138'
+        }),
+        keepalive: true   // Important for mobile browsers
+    }).catch(() => {
+        // ignore logging errors
     });
+
+});
 </script>
  
 
